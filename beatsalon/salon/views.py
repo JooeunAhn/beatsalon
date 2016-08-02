@@ -1,3 +1,9 @@
 from django.shortcuts import render
+import youtube_dl
 
-# Create your views here.
+def index(request):
+    return render(request, 'salon/index.html')   
+
+
+def serve(request):
+    pass
