@@ -5,6 +5,5 @@ from salon import views
 
 urlpatterns = [
         url(r'^$', views.index, name="index"),
-        url(r'^serve/$', views.serve, name="serve"),
-        ] 
-
+        url(r'^serve/(?P<pk>[a-zA-Z0-9-_]{11})$', views.serve, name="serve"),
+        ]
