@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block contents %}
+
+<div class = "row">
+    <div class="left_1">
+        <form action="#" class="form-inline" >
+                <input type="text" id="search" placeholder="Type something..." autocomplete="off" class="form-control" size="60px">
+                <input type="image" id="question" src="{% static 'blog/?.png' %}" alt="Submit">
+         </form>
+         <div id="serve"></div>
+         <table id="results"></table>
+    </div>
+</div>
+
+{% endblock %}
