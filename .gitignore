@@ -3,6 +3,5 @@ __pycache__
 db.sqlite3
 staticfiles
 */migrations/*
-manage.py
 *.mp3
 
