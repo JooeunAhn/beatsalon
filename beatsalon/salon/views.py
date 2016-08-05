@@ -12,8 +12,7 @@ def my_hook(status):
 def serve(request,pk):
     ydl_opt = {
             'format':'bestaudio/best',
-            'outtmpl': 'beatsalon/static/data/%(title)s.%(ext)s', #여기는 p5js에 노래를 받아올수있게 data파일에 저장되게 했어요
-            #그파일에서 p5js에서 읽어올수 있게 mp3파일 제목을 변수로 import시키면될거같네용 ㅎㅎ
+            'outtmpl': 'beatsalon/static/data/%(title)s.%(ext)s',
             'postprocessors':[{
                 'key':'FFmpegExtractAudio',
                 'preferredcodec':'mp3',

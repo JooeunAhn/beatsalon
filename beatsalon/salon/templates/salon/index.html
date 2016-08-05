@@ -1,14 +1,16 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block contents %}
+
 <div class = "row">
-    <div class = "col-md-6 col-md-offset-3">
-        <form action="#">
-            <p><input type="text" id="search" placeholder="Type something ..." autocomplete="off" class="form-control" /></p>
-            <p><input type="submit" value="Search" class="form-control btn btn-primary"></p>
+    <div class="left_1">
+        <form action="#" class="form-inline" >
+                <input type="text" id="search" placeholder="Type something..." autocomplete="off" class="form-control" size="60px">
+                <input type="image" id="question" src="{% static 'blog/?.png' %}" alt="Submit">
          </form>
          <div id="serve"></div>
-         <div id="results"></div>
+         <table id="results"></table>
     </div>
 </div>
+
 {% endblock %}
