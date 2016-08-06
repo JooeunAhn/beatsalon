@@ -8,13 +8,10 @@
  */
 
 $(document).ready(function(){
-    $("#test1").hide();
-    //hide한거 다시 나타나게해줭
-    $("#test2").hide();
-    $("#test3").hide();
+
     $('.clip-circle:not(:first)').hide();
     $(".playlistarrow").click(function(){
-        $('.clip-circle').next().toggle();
+        $('.clip-circle').next().animate({width: "toggle"});
     });
 });
 

@@ -107,7 +107,14 @@ a {
     display:block;
 }
 
-/* img slider css in menu slider */
+/* feed back button css in menu bar*/
+
+#feedback_button{
+    position:absolute;
+    display: block;
+}
+
+/* img slider css in menu bar */
 
 
 
