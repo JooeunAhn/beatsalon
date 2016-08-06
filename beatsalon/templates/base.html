@@ -57,10 +57,32 @@
 
 
 <script>
-var _pause = false //default
-var _play = true //default
+var _play = false
+var _pause = true //default
 var list_empty = true //default
 
+
+
+      $('img.play').click(function() {
+
+            _pause = false //now playing
+            if (list_empty != _pause){
+            alert("add song");
+            }
+
+          if (musicPlaying){
+            $(this).attr('src','{% static 'blog/X.png' %}');
+            list_empty = false
+            song.pause();
+            musicPlaying=false;
+          }
+          else{
+            $(this).attr('src','{% static 'blog/V.png' %}');
+            list_empty = false
+            song.play();
+            musicPlaying=true;
+          }
+      });
 
 
 
