@@ -1,11 +1,15 @@
 $( "div.play_button" ).mouseover(function() {
   $(".play").show();
+  $(".song_title").show();
 });
 $( "div.play_button" ).mouseout(function() {
     $(".play").hide();
+    $(".song_title").hide();
   });
 
 $(document).ready(function(){
+  $(".play").hide();
+  $(".song_title").hide();
   rotation();
 });
 
