@@ -1,3 +1,12 @@
+            #loading{
+                color:grey;
+                font-size: 20px;
+                position: relative;
+                left:45%;
+                top:10px;
+                opacity: 0;
+            }
+
             .search{
                 margin-top:100px;
             }
@@ -7,7 +16,7 @@
                 left:40%;
                 width:250px;
                 height: 250px;
-                border:solid white 10px;
+                /*border:solid white 10px;*/
             }
             .play{
                 position: absolute;
@@ -30,6 +39,7 @@
                top:120px;
                left:750px;
                position: relative;
+               margin:solid white 3px;
             }
 
             .test{
