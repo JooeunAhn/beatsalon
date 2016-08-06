@@ -11,13 +11,13 @@ $('img.play').click(function() {
       song.pause();
       musicPlaying=false;
       stop();
-      $('.play').attr('src', "{% static 'blog/V.png' %}");
+      $('.play').attr('src', '/static/blog/V.png');
     }
 
     else{
       song.play();
       musicPlaying=true;
       rotation();
-      $('.play').attr('src', "{% static 'blog/X.png' %}");
+      $('.play').attr('src', "/static/blog/X.png");
     }
 });
