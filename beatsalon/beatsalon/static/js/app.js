@@ -391,7 +391,7 @@ $(function() {
           console.log(results);
           $("#results").html("");
           $.each(results.items, function(index, item) {
-            $.get("static/tpl/item.html", function(data) {
+            $.get("/static/tpl/item.html", function(data) {
                 $("#results").append(tplawesome(data, [{"title":item.snippet.title, "videoid":item.id.videoId}]));
             });
           });

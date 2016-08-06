@@ -4,6 +4,7 @@ $( "div.play_button" ).mouseover(function() {
 $( "div.play_button" ).mouseout(function() {
     $(".play").hide();
   });
+
 $(document).ready(function(){
   rotation();
 });
