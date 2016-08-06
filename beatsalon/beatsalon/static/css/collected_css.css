@@ -47,14 +47,6 @@ a {
     font-size: 15px;
 }
 
-.clip-circle{
-    clip-path: circle(20px at center);
-    -webkit-clip-path: circle(20px at center);
-}
-.playlist{
-    position: absolute;
-    right:0;
-}
 
 /* menu slide css */
 

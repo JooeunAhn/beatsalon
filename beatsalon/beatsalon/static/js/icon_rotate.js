@@ -11,3 +11,5 @@ var rotation = function (){
 var stop = function (){
    $(".clip-circle:first").stopRotate();
 };
+
+rotation();
