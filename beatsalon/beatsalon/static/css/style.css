@@ -1,3 +1,33 @@
+            #loading{
+                color:grey;
+                font-size: 20px;
+                position: relative;
+                left:45%;
+                top:10px;
+                opacity: 0;
+            }
+
+            .search{
+                margin-top:100px;
+            }
+
+            .play_button{
+                position: absolute;
+                top: 40%;
+                left:40%;
+                width:250px;
+                height: 250px;
+                /*border:solid white 10px;*/
+            }
+
+            .play{
+                position: absolute;
+                top: 35%;
+                left: 35%;
+                width: 70px;
+            }
+
+
             form { margin-top : 20px; }
             form, #results {padding : 0 20px;}
 
