@@ -23,6 +23,47 @@
   </head>
   <body>
 
+
+  <div id="myModal1" class="modal1" style="display:none">
+  <div class="modal-content">
+    <span class="close1">X</span>
+    <div class="container">
+      <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#sendcomment" id="comment1">한줄 코멘트</a></li>
+        <li><a data-toggle="tab" href="#allcomments">모든 코멘트</a></li>
+      </ul>
+    </div>
+    <div class="tab-content">
+        <div id="sendcomment" class="tab-pane fade in active"><br>
+            <form action="" method="post">
+            {% csrf_token %}
+            <input name="author" class="form-control noto evaluation-input" placeholder="* 작성자 이름을 남겨주세요. :)"><br>
+            <input name="message"  class="form-control noto evaluation-input" placeholder="* 한 줄 코멘트를 남겨보세요. :)">
+            <br>
+            <input type="submit" class="btn btn-primary"></button>
+            </form>
+        </div>
+        <div id="allcomments" class="tab-pane fade">
+        {% for comment in comments %}
+        <div class="row">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <div class="caption">
+        <h3 id="cmt_title">{{comment.author}}</h3>
+        <p id="cmt_content">{{comment.message}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+    {% endfor %}
+        </div>
+    }
+    </div>
+  </div>
+</div>
+
+
+
     <div class="container-fluid">
         <div class="playlist">
             <img src="{% static 'blog/<.png' %}" id="slideleft" alt="" height="20px" class="playlistarrow">
@@ -58,10 +99,12 @@ $(document).ready(function(){
   <a href="#" class="control_next"><img src="{% static 'img/next.png' %}"/></a>
   <a href="#" class="control_prev"><img src="{% static 'img/prev.png' %}"/></a>
   <a href="#" class="close_menu" id="close_menu"><img src="{% static 'img/close_menu.png' %}"/></a>
-  <button id="feedback_button">피드백 쓰기</button>
+  <button id="myBtn1" style="left:0px;">open modal</button>
   <div id="slider2">
 
   <ul>
+
+
 <!--
       <a href="#" ><img src="{% static 'assets/style_1.png' %}" width=120px height=120px/></a>
       <a href="#"><img src="{% static 'assets/style_2.png' %}" width=120px height=120px/></a>
@@ -79,7 +122,6 @@ $(document).ready(function(){
     <li><a href="#"><img src="{% static 'assets/style_1.png' %}"/></a></li>
     <li><a href="#"><img src="{% static 'assets/style_2.png' %}"/></a></li>
     <li><a href="#"><img src="{% static 'assets/style_1.png' %}"/></a></li>
-
 
   </ul>
 </div>
@@ -119,16 +161,22 @@ $(document).ready(function(){
 <script>
 // Get the modal
 var modal = document.getElementById('myModal');
+var modal1 = document.getElementById('myModal1');
 
 // Get the button that opens the modal
 var btn = document.getElementById("myBtn");
+var btn1 = document.getElementById("myBtn1");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
+var span1 = document.getElementsByClassName("close1")[0];
 
 // When the user clicks the button, open the modal
 btn.onclick = function() {
     modal.style.display = "block";
+}
+btn1.onclick = function() {
+    modal1.style.display = "block";
 }
 
 // When the user clicks on <span> (x), close the modal
@@ -136,10 +184,13 @@ span.onclick = function() {
     modal.style.display = "none";
 }
 
+
+
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
+        modal1.style.display = "none";
     }
 }
 </script>
@@ -153,6 +204,9 @@ $(document).ready(function(){
         $('.clip-circle:not(:first)').animate({width:"toggle"});
       }
     });
+    $(".close1").click(function(event){
+              modal1.style.display = "none";
+    }
 });
 
 

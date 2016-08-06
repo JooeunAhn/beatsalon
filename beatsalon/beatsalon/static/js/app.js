@@ -351,8 +351,6 @@ function tplawesome(e,t){res=e;for(var n=0;n<t.length;n++){res=res.replace(/\{\{
 $(function() {
     $("form").on("submit", function(e) {
        $("#test1").show();
-       $("#test2").show();
-       $("#test3").show();
        e.preventDefault();
        // prepare the request
        var request = gapi.client.youtube.search.list({
