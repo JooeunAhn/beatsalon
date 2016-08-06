@@ -9,9 +9,7 @@
 
 $(document).ready(function(){
     $("#test1").hide();
-    //hide한거 다시 나타나게해줭
-    $("#test2").hide();
-    $("#test3").hide();
+    $(".play").hide();
     $('.clip-circle:not(:first)').hide();
     $(".playlistarrow").click(function(){
         $('.clip-circle').next().toggle();
@@ -29,9 +27,6 @@ function AnimateRotate(d, isPlaying){
     }
 };
 AnimateRotate(360, true);
-
-
-
 
 
 
@@ -376,8 +371,6 @@ function tplawesome(e,t){res=e;for(var n=0;n<t.length;n++){res=res.replace(/\{\{
 $(function() {
     $("form").on("submit", function(e) {
        $("#test1").show();
-       $("#test2").show();
-       $("#test3").show();
        e.preventDefault();
        // prepare the request
        var request = gapi.client.youtube.search.list({

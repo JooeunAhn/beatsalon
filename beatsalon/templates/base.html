@@ -16,7 +16,7 @@
        <script src = "https://apis.google.com/js/client.js?onload=init"></script>
   </head>
   <body>
-
+<!--playlist -->
     <div class="container-fluid">
         <div class="playlist">
             <img src="{% static 'blog/<.png' %}" id="slideleft" alt="" height="20px" class="playlistarrow">
@@ -26,21 +26,25 @@
             <img src="{% static 'blog/weezer.jpg' %}"" alt="" id="img4" class="clip-circle" height="40px" width="40px">
         </div>
             <img id="myBtn" src="{% static 'blog/+.png' %}">
-    </div>
+      </div>
+
 
 
 <!-- START MODAL -->
 
 <div id="myModal" class="modal">
-
   <!-- Modal content -->
   <div class="modal-content">
     <img class="close" src="{% static 'blog/X.png' %}">
         {% block contents %}
         {% endblock %}
+  </div>
 </div>
 
-
+<!--START PLAY SECTION-->
+<div class = "play_button">
+    <img class="play" src="{% static 'blog/X.png' %}">
+</div>
 
 <script>
         function popitup(url) {
@@ -49,10 +53,26 @@
           return false;
         }
 </script>
-
+<!--global variables/ tags for play pause next etc -->
 
 
 <script>
+var _pause = false //default
+var _play = true //default
+var list_empty = true //default
+
+
+
+
+      $( "div.play_button" ).mouseover(function() {
+        $(".play").show();
+      });
+
+      $( "div.play_button" ).mouseout(function() {
+          $(".play").hide();
+        });
+
+
       $('#add_1').click(function() {
           $(this).attr('src','{% static 'blog/V.png' %}');
       });
@@ -61,25 +81,6 @@
           $(this).attr('src','{% static 'blog/V.png' %}');
       });
 
-      string = $("#source").text();
-
-       $('#test1').click(function() {
-        //var bg = $(".ytp-cued-thumbnail-overlay").css('background-image');
-        //bg = bg.substring(5).slice(0, -2);
-        //$("#img1").attr('src', bg);
-        //$("#img1").attr('src', bg.match(/.*url\(['|"]([^)]*)['|"]\)/i));
-        //$("#img1").attr('src','bg');
-        var a = $(".video:first").attr('src');
-
-      });
-
-      $('#test2').click(function() {
-          alert('2');
-      });
-
-      $('#test3').click(function() {
-          alert('3');
-      });
 
 </script>
 
