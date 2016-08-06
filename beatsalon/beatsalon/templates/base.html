@@ -5,6 +5,8 @@
         <meta charset = "utf8">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+
+        <link rel="stylesheet" type="text/css" href="{% static 'css/collected_css.css' %}"/>
         <!-- libraries -->
         <script src="{% static 'libraries/p5.js' %} " type="text/javascript"></script>
         <script src="{% static 'libraries/p5.dom.js' %}" type="text/javascript"></script>
@@ -14,6 +16,10 @@
        <!-- Youtube api -->
        <script src = "{% static 'js/app.js' %}"></script>
        <script src = "https://apis.google.com/js/client.js?onload=init"></script>
+
+      <!-- start_merge with hyerin -->
+      <script src="{% static 'js/classie.js' %}" type="text/javascript"></script>
+     <script src="{% static 'js/modernizr.custom.js' %}"></script>
   </head>
   <body>
 
@@ -28,6 +34,42 @@
             <img id="myBtn" src="{% static 'blog/+.png' %}">
     </div>
 
+<!-- # bottom menu slide  -->
+
+<nav class="cbp-spmenu cbp-spmenu-horizontal cbp-spmenu-bottom" id="cbp-spmenu-s4">
+  <a href="#" class="control_next"><img src="{% static 'img/next.png' %}"/></a>
+  <a href="#" class="control_prev"><img src="{% static 'img/prev.png' %}"/></a>
+  <a href="#" class="close_menu" id="close_menu"><img src="{% static 'img/close_menu.png' %}"/></a>
+  <div id="slider2">
+
+  <ul>
+<!--
+      <a href="#" ><img src="{% static 'assets/style_1.png' %}" width=120px height=120px/></a>
+      <a href="#"><img src="{% static 'assets/style_2.png' %}" width=120px height=120px/></a>
+-->
+      <!-- failed to switch the style js files.-->
+      <!-- 이걸 써봐야 하나..? <input type="submit"> -->
+
+    <li><a href="#"><img src="{% static 'assets/style_1.png' %}" /></a></li>
+    <li><a href="#"><img src="{% static 'assets/style_2.png' %}"/></a></li>
+    <li><a href="#"><img src="{% static 'assets/style_2.png' %}"/></a></li>
+    <li><a href="#"><img src="{% static 'assets/style_1.png' %}"/></a></li>
+    <li><a href="#"><img src="{% static 'assets/style_2.png' %}"/></a></li>
+    <li><a href="#"><img src="{% static 'assets/style_1.png' %}"/></a></li>
+    <li><a href="#"><img src="{% static 'assets/style_2.png' %}"/></a></li>
+    <li><a href="#"><img src="{% static 'assets/style_1.png' %}"/></a></li>
+    <li><a href="#"><img src="{% static 'assets/style_2.png' %}"/></a></li>
+    <li><a href="#"><img src="{% static 'assets/style_1.png' %}"/></a></li>
+
+
+  </ul>
+</div>
+</nav>
+
+ <!-- # bottom menu button -->
+      <div class="button_default" id="bottom">
+        <a href="#" id="showBottom"><img src="{% static 'img/sketch_menu.png' %}" id="img_b"/></a>
+      </div>
 
 <!-- START MODAL -->
 
@@ -111,5 +153,10 @@ window.onclick = function(event) {
     }
 }
 </script>
+    <script src="{% static 'js/img_slider2.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/ready_main.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/menu_slider.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/icon_slider.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/icon_rotate.js' %}" type="text/javascript"></script>
     </body>
 </html>
