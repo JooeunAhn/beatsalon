@@ -7,28 +7,6 @@
  * Website: http://jqueryrotate.com
  */
 
-$(document).ready(function(){
-
-    $('.clip-circle:not(:first)').hide();
-    $(".playlistarrow").click(function(){
-        $('.clip-circle').next().animate({width: "toggle"});
-    });
-});
-
-
-function AnimateRotate(d, isPlaying){
-    if(isPlaying==true){
-        $({deg:0}).animate({deg:d},
-            {step: function(now,fx){
-                $('.clip-circle:first').css({transform:'rotate('+ now+'deg)'});
-            }
-        });
-    }
-};
-AnimateRotate(360, true);
-
-
-
 
 
 
@@ -412,4 +390,3 @@ function init() {
         // yt api is ready
     });
 }
-

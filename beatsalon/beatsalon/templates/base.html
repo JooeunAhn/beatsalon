@@ -45,7 +45,7 @@ $(document).ready(function(){
     if (play_list){
       for (var i =0 ; i<play_list.length; i++){
         if (play_list[i]){
-        $(".playlist").append("<a href='/serve/"+play_list[i].slice(23,34)+"'><img src='"+play_list[i]+"' alt='' id='img"+(i+1).toString()+"' class='clip-circle' height='40px' width='40px'></a>");
+        $(".playlist").append("<a class='playlist_link' href='/serve/"+play_list[i].slice(23,34)+"'><img src='"+play_list[i]+"' alt='' id='img"+(i+1).toString()+"' class='clip-circle' height='40px' width='40px'></a>");
       }
     }
   }
@@ -142,6 +142,30 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+</script>
+
+<script>
+$(document).ready(function(){
+    $('.clip-circle:not(:first)').hide();
+    $(".playlistarrow").click(function(event){
+      var isArrow = $(event.target).is(".playlistarrow");
+      if (isArrow){
+        $('.clip-circle:not(:first)').animate({width:"toggle"});
+      }
+    });
+});
+
+
+$('.dim').click(function(event){
+
+    var isDim = $(event.target).is('.dim');
+    if(isDim){ //make sure I am a dim element
+        $('.hidden', this).toggle(); // p00f
+    }
+
+});
+
+</script>
 </script>
     <script src="{% static 'js/play_pause.js' %}" type="text/javascript"></script>
     <script src="{% static 'js/img_slider2.js' %}" type="text/javascript"></script>
