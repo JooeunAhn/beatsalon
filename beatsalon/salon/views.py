@@ -28,4 +28,6 @@ def serve(request,pk):
     else:
         with youtube_dl.YoutubeDL(ydl_opt) as ydl:
             info = ydl.extract_info("https://youtu.be/"+pk, download=False)
-    return render(request, 'salon/serve.html',{'info':info,})
+
+    thumbnail_url = info['thumbnails'][0]["url"]
+    return render(request, 'salon/serve.html',{'info':info,"thumbnail_url":thumbnail_url,})
