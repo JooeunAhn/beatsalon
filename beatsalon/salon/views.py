@@ -1,9 +1,25 @@
 from django.shortcuts import render, redirect
 import youtube_dl
 from salon.models import Audio
+from .forms import CommentForm
+from .models import Comment
 
 def index(request):
-    return render(request, 'salon/index.html')
+    if request.method == 'POST':
+        form = CommentForm(request.POST, request.FILES)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.save()
+            comments = Comment.objects.order_by('pk').reverse()
+            return render(request, 'salon/index.html', {'comments': comments})
+    else:
+        form = CommentForm()
+    comments = Comment.objects.order_by('pk').reverse()
+    return render(request, 'salon/index.html',
+        {'comments': comments}
+    )
+
+
 
 def my_hook(status):
     if status['status'] == "finished":

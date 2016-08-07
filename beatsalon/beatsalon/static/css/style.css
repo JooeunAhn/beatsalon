@@ -92,6 +92,23 @@
                 overflow: auto;
             }
 
+            .modal1 {
+                display: none;
+                position: absolute;
+                left: 90%;
+                right: 0;
+                top: 0px;
+                bottom: 0;
+                width:1300px;
+                height:800px;
+                z-index: 1;
+                padding-top: 100px;
+                left: 0;
+                top: 0;
+                overflow: auto;
+            }
+
+
             #add_1{
                 display: inline;
                 width: 5%;
@@ -111,6 +128,19 @@
                 height:600px;
                 overflow: scroll;
             }
+
+            .modal-content1 {
+                padding: 2px 16px;
+                background-color: #47476b;
+                border: 1px solid #888;
+                position: absolute;
+                left: 17%;
+                width: 900px;
+                height:400px;
+                overflow: scroll;
+            }
+
+
 
             /* The Close Button */
             .close {
