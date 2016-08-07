@@ -1,10 +1,3 @@
-{% extends 'base.html'%}
-{% load staticfiles %}
-{% block contents %}
-<!--
-<script src="{% static 'js/skech.js' %}" type="text/javascript" id='MyJavaScript'></script>
--->
-<script>
 var allSketch = function(q){
   q.song;
   var musicPlaying =true;
@@ -20,7 +13,7 @@ var allSketch = function(q){
   var reset;
 
   q.preload=function(){
-    q.song=q.loadSound({% with 'data/'|add:info.title|add:'.mp3' as music_static %}"{% static music_static %}"{% endwith %});
+    q.song=q.loadSound("/static/data/[MV] IU(아이유) _ Twenty-three(스물셋).mp3");
   }
 
   q.setup=function(){
@@ -470,35 +463,3 @@ var allSketch = function(q){
 //     }
 //   }
 // }
-</script>
-<!--play/pause-->
-<div class = "play_button">
-    <img class="play" src="{% static 'blog/X.png' %}">
-</div>
-<h2 style="position: absolute;
-          top: 10%;
-          width:100%;
-          color:white;" class="song_title" style="color:white;">{{info.title}}</span>
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <img class="close" src="{% static 'blog/X.png' %}">
-    <div class = "row">
-      <div class="left_1">
-        <form action="#" class="form-inline" >
-                <input type="text" id="search" placeholder="Type something..." autocomplete="off" class="form-control" size="60px">
-                <input type="image" id="question" src="{% static 'blog/?.png' %}" alt="Submit">
-         </form>
-         <div id="serve"></div>
-         <table id="results"></table>
-    </div>
-</div>
-</div>
-</div>
-
-
-<script>
-new p5(allSketch);
-</script>
-{% endblock %}
