@@ -143,12 +143,21 @@
 
 
             /* The Close Button */
-            .close .close1 {
+            .close {
                 padding-top:10px;
                 width: 5%;
                 color: #aaaaaa;
                 float: right;
             }
+
+            .close1 {
+                padding-top:10px;
+                width: 20px;
+                color: #aaaaaa;
+                float: right;
+            }
+
+
 
             .close:hover,
 
