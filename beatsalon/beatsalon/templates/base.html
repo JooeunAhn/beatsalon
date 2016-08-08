@@ -144,7 +144,7 @@ $(document).ready(function(){
     <li><a href="#"><img src="{% static 'assets/style_2.png' %}"/></a></li>
     <li><a href="#"><img src="{% static 'assets/style_1.png' %}"/></a></li>
     <li><a href="#"><img src="{% static 'assets/style_2.png' %}"/></a></li>
-    <li><a href="#"><img src="{% static 'assets/style_1.png' %}"/></a></li>
+    <li><a href="#"><img src="{% static 'assfets/style_1.png' %}"/></a></li>
     <li><a href="#"><img src="{% static 'assets/style_2.png' %}"/></a></li>
     <li><a href="#"><img src="{% static 'assets/style_1.png' %}"/></a></li>
 
@@ -154,7 +154,11 @@ $(document).ready(function(){
 
  <!-- # bottom menu button -->
       <div class="button_default" id="bottom">
-        <a href="#" id="showBottom"><img src="{% static 'img/sketch_menu.png' %}" id="img_b"/></a>
+        <a href="#" id="showBottom">
+        <img src="{% static 'img/sketch_menu.png' %}" id="img_b"/>
+        <span id="img_c">Beat Salon</span>
+       </a>
+       <span id="img_d"/>Powered by Django </span>
       </div>
 
         {% block contents %}

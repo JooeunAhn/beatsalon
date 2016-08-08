@@ -1,3 +1,29 @@
+            #img_b{
+                padding: 5px;
+                margin :10px;
+                position: absolute;
+                bottom:10px;
+                left: 10px;
+            }
+
+            #img_c{
+                position: absolute;
+                bottom: 8px;
+                left: 70px;
+                font-family: "Beat";
+                font-size: 25px;
+                color:grey;
+            }
+
+            #img_d{
+                position: absolute;
+                bottom: 8px;
+                right: 30px;
+                font-family: "Beat";
+                font-size: 25px;
+                color:grey;
+            }
+
             #loading{
                 color:grey;
                 font-size: 20px;
@@ -118,6 +144,7 @@
             }
 
             /* Modal Content */
+
             .modal-content {
                 padding: 2px 16px;
                 background-color: rgba(0,0,0,0.5);
@@ -131,7 +158,8 @@
 
             .modal-content1 {
                 padding: 2px 16px;
-                background-color: #47476b;
+                background-color: black;
+                opacity:0.9;
                 border: 1px solid #888;
                 position: absolute;
                 left: 17%;

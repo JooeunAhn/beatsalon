@@ -13,6 +13,11 @@ a {
     src:url("Moon_Light.otf");
 }
 
+@font-face{
+    font-family: "Beat";
+    src:url("HelveticaNeue.dfont");
+}
+
 /* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
 .clearfix:before,
 .clearfix:after {
@@ -120,7 +125,6 @@ a {
     .cbp-spmenu-bottom {
         bottom: -110px;
     }
-
 }
 
 /* menu slide button css */
@@ -146,8 +150,6 @@ a {
 }
 
 /* img slider css in menu bar */
-
-
 
 #slider2{
     position:absolute;
