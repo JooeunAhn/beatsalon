@@ -41,23 +41,24 @@
         <div id="sendcomment" class="tab-pane fade in active"><br>
             <form action="" method="post">
             {% csrf_token %}
-            <input name="author" class="form-control noto evaluation-input" placeholder="* 작성자 이름을 남겨주세요. :)"><br>
-            <input name="message"  class="form-control noto evaluation-input" placeholder="* 한 줄 코멘트를 남겨보세요. :)">
+            <input id="author" type="text" name="author" value="{{ comment.author }}" class="form-control noto evaluation-input" placeholder="* 작성자 이름을 남겨주세요. :)"><br>
+            <input id="message" type="text" name="message" value="{{ comment.message }}" class="form-control noto evaluation-input" placeholder="* 한 줄 코멘트를 남겨보세요. :)">
             <br>
             <input type="submit" class="btn btn-primary"></button>
             </form>
         </div>
         <div id="allcomments" class="tab-pane fade">
-        <br><br>
+        <br>
         {% for comment in comments %}
         <div class="row">
-  <div class="col-sm-6 col-md-4">
-
+  <div class="container-fluid">
     <div class="thumbnail">
       <div class="caption">
-        <h3 id="cmt_title">{{ comment.author }}</h3>
-        <p id="cmt_content">{{ comment.message }}</p>
-        <p id="cmt_content">{{ comment.created_at |date:"Y/m/d, g:i a " }}</p>
+      <p id="cmt_content">{{comment.message}}</p>
+<p class="element" id="cmt_title">{{comment.author}} </p>
+{{ comment.created_at |date:"Y/m/d, g:i a" }}
+
+
       </div>
     </div>
   </div>
