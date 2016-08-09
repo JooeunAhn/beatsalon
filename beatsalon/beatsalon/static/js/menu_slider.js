@@ -16,10 +16,33 @@
                 disableOther( 'showBottom' );
             };
 
+
+
             closeButton.onclick = function(){
                classie.toggle(this, 'active');
-               classie.toggle(menuBottom, 'cbp-spmenu-open')
+               classie.toggle(menuBottom, 'cbp-spmenu-open');
                img_b.style.display="block";
                img_c.style.display="block";
                img_d.style.display="block";
             };
+// 도와주세요 개발자님들  ~..~
+// $( "#close_tab" )
+//   .mouseenter(function() {
+//                 classie.toggle(this, 'active');
+//                 classie.toggle( menuBottom, 'cbp-spmenu-open' );
+//                 img_b.style.display="none";
+//                 img_c.style.display="none";
+//                 img_d.style.display="none";
+//                 disableOther( 'showBottom' );
+//   })
+//   .mouseleave(function() {
+//               classie.toggle(this, 'active');
+//                classie.toggle(menuBottom, 'cbp-spmenu-open');
+//                img_b.style.display="block";
+//                img_c.style.display="block";
+//                img_d.style.display="block";
+//   });
+
+
+
+
