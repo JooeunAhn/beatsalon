@@ -49,10 +49,10 @@
     <div class="container">
       <ul class="nav nav-tabs">
         <li class="active">
-            <a data-toggle="tab" href="#sendcomment" id="comment1" style="color:grey;">한줄 코멘트</a>
+            <a data-toggle="tab" href="#sendcomment" id="comment1" style="color:grey; margin:3px;">한줄 코멘트</a>
         </li>
         <li>
-            <a data-toggle="tab" href="#allcomments" style="color:grey;">모든 코멘트</a></li>
+            <a data-toggle="tab" href="#allcomments" style="color:grey;margin:3px;">모든 코멘트</a></li>
       </ul>
     </div>
 
@@ -76,7 +76,7 @@
     <div class="thumbnail">
       <div class="caption">
       <p id="cmt_content">{{comment.message}}</p>
-<p class="element" id="cmt_title">{{comment.author}} </p>
+<p class="element" id="cmt_title"> - by {{comment.author}} 님</p>
 {{ comment.created_at |date:"Y/m/d, g:i a" }}
 
 
@@ -155,7 +155,7 @@ $(document).ready(function(){
 
  <!-- # top menu button -->
       <div id="img_a"/>Drop the Beat</div>
-      <a href="https://github.com/JooeunAhn/beatsalon" target="_blank"><img src="{% static 'img/sketch_menu.png' %}" id="" style="width:30px; height:30px; margin:10px;"></a>
+      <a href="https://github.com/JooeunAhn/beatsalon" target="_blank"><img src="{% static 'blog/github.png' %}" id="" style="width:50px; height:50px; margin:20px;"></a>
       <button id="myBtn1" style="left:0px;">Leave Comments</button>
     <!--link to git-->
 
@@ -163,7 +163,7 @@ $(document).ready(function(){
       <div class="button_default" id="bottom">
         <a href="#" id="showBottom">
         <img src="{% static 'img/sketch_menu.png' %}" id="img_b"/>
-        <span id="img_c">Beat Salon</span>
+        <span id="img_c">BEAT SALON</span>
         </a>
         <span id="img_d"/>Powered by Django </span>
       </div>
