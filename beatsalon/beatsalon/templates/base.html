@@ -20,7 +20,7 @@
       <script src="{% static 'js/classie.js' %}" type="text/javascript"></script>
      <script src="{% static 'js/modernizr.custom.js' %}"></script>
      <!--ajax-->
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
   <body>
@@ -197,6 +197,7 @@ var span1 = document.getElementsByClassName("close1")[0];
 
 // When the user clicks the button, open the modal
 btn.onclick = function() {
+    console.log("goood!")
     modal.style.display = "block";
 }
 btn1.onclick = function() {
@@ -248,11 +249,12 @@ $('.dim').click(function(event){
 });
 
 </script>
-</script>
+
+    <script src="{% static 'js/icon_rotate.js' %}" type="text/javascript"></script>
     <script src="{% static 'js/play_pause.js' %}" type="text/javascript"></script>
     <script src="{% static 'js/img_slider2.js' %}" type="text/javascript"></script>
     <script src="{% static 'js/menu_slider.js' %}" type="text/javascript"></script>
     <script src="{% static 'js/ajax.js' %}" type="text/javascript"></script>
-    <script src="{% static 'js/icon_rotate.js' %}" type="text/javascript"></script>
+
     </body>
 </html>
