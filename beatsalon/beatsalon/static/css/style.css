@@ -1,3 +1,4 @@
+
             @font-face{
                 font-family: "BeatSalon";
                 src:url("Moon_Light.otf");
@@ -38,7 +39,7 @@
                 position: absolute;
                 bottom: 8px;
                 left: 70px;
-                font-family: "Beatslaon";
+                font-family: "Beatsalon";
                 font-size: 25px;
                 color:white;
                 opacity: 0.7;
@@ -48,7 +49,7 @@
                 position: absolute;
                 bottom: 8px;
                 right: 30px;
-/*                font-family: "Beat";*/
+                font-family: "Beatsalon";
                 font-size: 20px;
                 color:white;
                 opacity: 0.7;
@@ -118,7 +119,7 @@
 
             #myBtn{
                 position: relative;
-                top:14px;
+                top:12px;
                 left: 97%;
                 width:30px;
             }
@@ -140,7 +141,7 @@
                 top: 0;
                 bottom: 0;
                 width:1300px;
-                height:800px;
+                height:750px;
                 z-index: 1;
                 padding-top: 100px;
                 left: 0;
@@ -209,10 +210,12 @@
             }
 
             .close1 {
-                padding-top:10px;
-                width: 20px;
+                position: relative;
+                top:5px;
+                width: 40px;
                 color: #aaaaaa;
                 float: right;
+                width:20px;
             }
 
 

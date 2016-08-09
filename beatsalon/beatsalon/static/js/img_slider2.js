@@ -1,5 +1,4 @@
 $(document).ready(function ($) {
-
   $('#checkbox').change(function(){
     setInterval(function () {
         moveRight();
