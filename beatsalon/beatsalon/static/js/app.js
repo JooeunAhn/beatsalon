@@ -356,8 +356,8 @@ $(function() {
        var request = gapi.client.youtube.search.list({
             part: "snippet",
             type: "video",
-            q: encodeURIComponent($("#search").val()).replace(/%20/g, "+"),
-            maxResults: 3,
+            q: $("#search").val(),
+            maxResults: 10,
             order: "viewCount",
             publishedAfter: "2015-01-01T00:00:00Z"
        });
