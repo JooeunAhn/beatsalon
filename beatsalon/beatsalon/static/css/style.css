@@ -1,3 +1,31 @@
+            @font-face{
+                font-family: "BeatSalon";
+                src:url("Moon_Light.otf");
+            }
+
+            @font-face{
+                font-family: "Beat";
+                src:url("HelveticaNeue.dfont");
+            }
+
+            .nav-tabs > li > a{
+                background-color: #303136
+                color:#fff;
+                padding:5px
+            }
+
+/* Drop the beat*/
+            #img_a{
+                padding: 5px;
+                margin :10px;
+                position: absolute;
+                top:33px;
+                right: 10px;
+                font-family: "Beatsalon";
+                color:grey;
+                font-size: 15px;
+            }
+
             #img_b{
                 padding: 5px;
                 margin :10px;
@@ -5,23 +33,25 @@
                 bottom:10px;
                 left: 10px;
             }
-
+/* Beat Salon part*/
             #img_c{
                 position: absolute;
                 bottom: 8px;
                 left: 70px;
-                font-family: "Beat";
+                font-family: "Beatslaon";
                 font-size: 25px;
-                color:grey;
+                color:white;
+                opacity: 0.7;
             }
-
+/*powered by Django part*/
             #img_d{
                 position: absolute;
                 bottom: 8px;
                 right: 30px;
-                font-family: "Beat";
-                font-size: 25px;
-                color:grey;
+/*                font-family: "Beat";*/
+                font-size: 20px;
+                color:white;
+                opacity: 0.7;
             }
 
             #loading{
