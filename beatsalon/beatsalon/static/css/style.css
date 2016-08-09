@@ -1,21 +1,4 @@
-<<<<<<< HEAD
 
-            @font-face{
-                font-family: "BeatSalon";
-                src:url("Moon_Light.otf");
-            }
-
-            @font-face{
-                font-family: "Beat";
-                src:url("HelveticaNeue.dfont");
-            }
-
-            .nav-tabs > li > a{
-                background-color: #303136
-                color:#fff;
-                padding:5px
-            }
-=======
 @font-face{
     font-family: "BeatSalon";
     src:url("Moon_Light.otf");
@@ -31,7 +14,7 @@
     color:#fff;
     padding:5px
 }
->>>>>>> 34fbcbaed4ec22f54758d68e78f9d1c1d07eac86
+
 
 /* Drop the beat*/
 #img_a{
@@ -53,7 +36,7 @@
     left: 10px;
 }
 /* Beat Salon part*/
-<<<<<<< HEAD
+
             #img_c{
                 position: absolute;
                 bottom: 8px;
