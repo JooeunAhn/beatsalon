@@ -357,7 +357,7 @@ $(function() {
             part: "snippet",
             type: "video",
             q: $("#search").val(),
-            maxResults: 3,
+            maxResults: 10,
             order: "viewCount",
             publishedAfter: "2015-01-01T00:00:00Z"
        });
