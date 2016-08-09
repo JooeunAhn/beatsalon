@@ -1,4 +1,4 @@
- var menuBottom = document.getElementById( 'cbp-spmenu-s4' ),
+          var menuBottom = document.getElementById( 'cbp-spmenu-s4' ),
                 showBottom = document.getElementById( 'showBottom' ),
                 img_b = document.getElementById('img_b'),
                 img_c = document.getElementById('img_c'),
@@ -25,6 +25,7 @@
                img_c.style.display="block";
                img_d.style.display="block";
             };
+
 // 도와주세요 개발자님들  ~..~
 // $( "#close_tab" )
 //   .mouseenter(function() {
@@ -42,7 +43,3 @@
 //                img_c.style.display="block";
 //                img_d.style.display="block";
 //   });
-
-
-
-

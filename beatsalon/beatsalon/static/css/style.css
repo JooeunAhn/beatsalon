@@ -1,3 +1,8 @@
+            #defaultCanvas0{
+                position: absolute;
+                top:0;
+                z-index: -1;
+            }
             .close_tab{
                 position:fixed;
                 bottom:10px;
