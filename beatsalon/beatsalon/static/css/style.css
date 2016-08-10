@@ -1,51 +1,84 @@
+            #defaultCanvas0{
+                position: absolute;
+                top:0;
+                z-index: -1;
+            }
+            .close_tab{
+                position:fixed;
+                bottom:10px;
+                height: 30%;
+                width: 100%;
+                border:solid white 10px;
+            }
 
-@font-face{
-    font-family: "BeatSalon";
-    src:url("Moon_Light.otf");
-}
+            .scheme{
+                position: absolute;
+                left:260px;
 
-@font-face{
-    font-family: "Beat";
-    src:url("HelveticaNeue.dfont");
-}
+            }
 
-.nav-tabs > li > a{
-    background-color: #303136
-    color:#fff;
-    padding:5px
-}
+            .next_img{
+                width: 60px;
+                height: 60px;
+                margin-bottom: 40px;
+                margin-right: 40px;
+            }
+
+            .prev_img{
+                width: 60px;
+                height: 60px;
+                margin-bottom: 40px;
+                margin-left: 350px;
+            }
+
+            @font-face{
+                font-family: "BeatSalon";
+                src:url("Moon_Light.otf");
+            }
+
+            @font-face{
+                font-family: "Beat";
+                src:url("HelveticaNeue.dfont");
+            }
+
+            .nav-tabs > li > a{
+                background-color: #303136;
+                color: #fff;
+                padding:5px;
+            }
 
 
-/* Drop the beat*/
-#img_a{
-    padding: 5px;
-    margin :10px;
-    position: absolute;
-    top:33px;
-    right: 10px;
-    font-family: "Beatsalon";
-    color:grey;
-    font-size: 15px;
-}
+            /* Drop the beat*/
+            #img_a{
+                padding: 5px;
+                margin :10px;
+                position: absolute;
+                top:33px;
+                right: 10px;
+                font-family: "Beatsalon";
+                color:grey;
+                font-size: 15px;
+            }
 
-#img_b{
-    padding: 5px;
-    margin :10px;
-    position: absolute;
-    bottom:10px;
-    left: 10px;
-}
+            #img_b{
+                padding: 5px;
+                margin :10px;
+                position: absolute;
+                bottom:10px;
+                left: 10px;
+            }
 /* Beat Salon part*/
 
             #img_c{
                 position: absolute;
                 bottom: 8px;
-                left: 70px;
+                left: 60px;
                 font-family: "Beatsalon";
-                font-size: 25px;
+                font-size: 20px;
                 color:white;
                 opacity: 0.7;
             }
+
 /*powered by Django part*/
             #img_d{
                 position: absolute;
@@ -260,26 +293,6 @@
             top:10px;
             right:65px;
         }
-=======
-#img_c{
-    position: absolute;
-    bottom: 8px;
-    left: 70px;
-    font-family: "Beatslaon";
-    font-size: 25px;
-    color:white;
-    opacity: 0.7;
-}
-/*powered by Django part*/
-#img_d{
-    position: absolute;
-    bottom: 8px;
-    right: 30px;
-/*                font-family: "Beat";*/
-    font-size: 20px;
-    color:white;
-    opacity: 0.7;
-}
 
 #loading{
     color:grey;
@@ -436,7 +449,7 @@ iframe{
 }
 
 .close1 {
-    padding-top:10px;
+    padding-top: 3px;
     width: 20px;
     color: #aaaaaa;
     float: right;
