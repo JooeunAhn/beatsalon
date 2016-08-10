@@ -1,8 +1,8 @@
-            #defaultCanvas0{
+/*            #defaultCanvas0{
                 position: absolute;
                 top:0;
-                z-index: -1;
-            }
+                left:0;
+            }*/
             .close_tab{
                 position:fixed;
                 bottom:10px;
@@ -10,6 +10,14 @@
                 width: 100%;
                 border:solid white 10px;
             }
+/*            #upup{
+                position:relative;
+            }
+            .up_index{
+                position:absolute;
+                top:0;
+                left:0;
+            }*/
 
             .scheme{
                 position: absolute;
