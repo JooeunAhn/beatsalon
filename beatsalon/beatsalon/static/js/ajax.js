@@ -11,6 +11,7 @@ $("#sendcomment form").submit(function(e){
             $('.caption').append('<p class="element" id="cmt_content"</p>');
             $('#cmt_content').html($('#message').val());
 
+
             $('#author').val('');
             $('#message').val('');
 
