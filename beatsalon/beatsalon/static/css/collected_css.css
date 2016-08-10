@@ -83,6 +83,14 @@ a {
     opacity:1;
 }
 
+/* closing div for menu slide css */
+#range_for_closing{
+    position:absolute;
+    top:10%;
+    width:100%;
+    height:85%;
+}
+
 
 /* menu slide css */
 
