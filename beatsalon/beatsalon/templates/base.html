@@ -30,8 +30,21 @@ $("#img_song").animateText([
      <script src="{% static 'js/modernizr.custom.js' %}"></script>
      <!--ajax-->
      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--do not touch-->
+    <style type='text/css'>
+      body {padding: 0; margin: 0;}
+       div.buttonclass{position: absolute;}
+      div.buttonclass div.onlybutton{position: relative; z-index: 100;}
+      div.buttonclass div.onlybutton div{display: inline-block;}
+      div.buttonclass div.onebutton div{z-index: 400;}
+      div.buttonclass div.onlyimg{position: absolute;top:0; z-index: 0;}
+      div.buttonclass div.onlyimg img{display: inline-block;}
+      canvas{z-index: -100;}
+    </style>
+
   </head>
   <body>
+
 
   <!-- <div class="close_tab" id="close_tab"></div> -->
   <div id="upup">
@@ -147,22 +160,38 @@ $(document).ready(function(){
   <button id="myBtn1" style="left:0px;">Leave Comments</button>
   <a href="#" class="control_next"><img class="next_img" src="{% static 'img/next.png' %}"/></a>
   <a href="#" class="control_prev"><img class="prev_img" src="{% static 'img/prev.png' %}"/></a>
-  <div id="slider2">
-  <ul>
-<!--
-      <a href="#" ><img src="{% static 'assets/style_1.png' %}" width=120px height=120px/></a>
-      <a href="#"><img src="{% static 'assets/style_2.png' %}" width=120px height=120px/></a>
--->
-      <!-- failed to switch the style js files.-->
-      <!-- 이걸 써봐야 하나..? <input type="submit"> -->
-          <li><a href="#"><img class="scheme" src="{% static 'blog/sketch1.png' %}" /></a></li>
+
+
+  <!--do not touch-->
+  <div class="buttonclass">
+     <div class="onlybutton">
+        <div id='button1'></div>
+        <div id='button2'></div>
+        <div id='button3'></div>
+      </div>
+      <div class="onlyimg">
+          <img src="{% static 'assets/movingbox.png' %}" alt="" style="width:232px; height:140px; display: inline-block;" id='button1'/>
+          <img src="{% static 'assets/spreading.png' %}" alt="" style="width:232px; height:140px;display: inline-block;" id='button2'/>
+          <img src="{% static 'assets/random.png' %}" alt="" style="width:232px; height:140px;" id='button3'/>
+      </div>
+    </div>
+
+ <!--  <div id="slider2">
+  <ul> -->
+                                    <!--
+                                          <a href="#" ><img src="{% static 'assets/style_1.png' %}" width=120px height=120px/></a>
+                                          <a href="#"><img src="{% static 'assets/style_2.png' %}" width=120px height=120px/></a>
+                                    -->
+                                          <!-- failed to switch the style js files.-->
+                                          <!-- 이걸 써봐야 하나..? <input type="submit"> -->
+<!--           <li><a href="#"><img class="scheme" src="{% static 'blog/sketch1.png' %}" /></a></li>
           <li><a href="#"><img class="scheme" src="{% static 'blog/sketch1.png' %}" /></a></li>
           <li><a href="#"><img class="scheme" src="{% static 'blog/sketch1.png' %}" /></a></li>
           <li><a href="#"><img class="scheme" src="{% static 'blog/sketch1.png' %}" /></a></li>
           <li><a href="#"><img class="scheme" src="{% static 'blog/sketch1.png' %}" /></a></li>
 
   </ul>
-</div>
+</div> -->
 </div>
 
 
@@ -172,8 +201,7 @@ $(document).ready(function(){
       <div>
       ♬ Now playing -
       </div>
-      <div id="img_song"/> {{info.title}}
-      </div>
+      <div id="img_song"/> {{info.title}}</div>
       <!--
       <a href="https://github.com/JooeunAhn/beatsalon" target="_blank"><img src="{% static 'blog/github.png' %}" id="" style="width:50px; height:50px; margin:20px;"></a>
 -->

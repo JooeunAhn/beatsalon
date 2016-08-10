@@ -1,3 +1,7 @@
+           .onlyimg{
+            display: inline-block;
+           }
+
             #defaultCanvas0{
 /*                position: absolute;*/
                 top:-20px;
@@ -63,9 +67,6 @@
                 bottom:10px;
                 left: 10px;
             }
-<<<<<<< HEAD
-            /* Beat Salon part*/
-=======
 
             /* song-name*/
             #img_song{
@@ -80,11 +81,8 @@
             }
 
 /* Beat Salon part*/
->>>>>>> 6c5c90d32fcefe29476dd70138a5897c1e9ed122
-
             #img_c{
                 position: absolute;
-                z-index: 1;
                 bottom: 8px;
                 left: 60px;
                 font-family: "Beatsalon";
