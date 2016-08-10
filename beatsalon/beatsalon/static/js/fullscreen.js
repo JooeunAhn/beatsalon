@@ -3,7 +3,8 @@
   });
 document.addEventListener("keydown", function(e) {
   if (e.keyCode == 13) {
-    toggleFullScreen();
+    if ('#myModal1' && 'myModal'). on('hidden.bs.modal', function(e){
+      toggleFullScreen();
   }
 }, false);
 function toggleFullScreen() {
