@@ -98,7 +98,7 @@ a {
 
 .cbp-spmenu-horizontal {
     width: 100%;
-    height: 150px;
+    height: 200px;
     z-index: 1000;
     overflow: hidden;
 }
@@ -108,7 +108,7 @@ a {
 }
 
 .cbp-spmenu-bottom {
-    bottom: -150px;
+    bottom: -200px;
 }
 
 @media screen and (max-width: 55.1875em){
