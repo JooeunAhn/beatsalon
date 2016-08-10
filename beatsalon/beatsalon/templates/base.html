@@ -17,12 +17,18 @@
        <script src = "{% static 'js/app.js' %}"></script>
        <script src = "{% static 'js/fullscreen.js' %}"></script>
        <script src = "https://apis.google.com/js/client.js?onload=init" ></script>
-
+<script type = "text/javascript">
+$("#img_song").animateText([
+  {
+    offset: 0,
+    duration: 1000
+  }
+  ]);
+</script>
       <!-- start_merge with hyerin -->
       <script src="{% static 'js/classie.js' %}" type="text/javascript"></script>
      <script src="{% static 'js/modernizr.custom.js' %}"></script>
      <!--ajax-->
-
      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
   <body>
@@ -102,9 +108,9 @@
 <!--playlist-->
     <div class="container-fluid">
         <div class="playlist">
-            <img src="{% static 'blog/<.png' %}" id="slideleft" alt="" height="30px" class="playlistarrow">
+            <img src="{% static 'blog/<.png' %}" id="slideleft" alt="" height="20px" class="playlistarrow">
         </div>
-            <img id="myBtn" src="{% static 'blog/+.png' %}">
+            <img id="myBtn" src="{% static 'blog/newplus.png' %}" height="35px" width="35px" style="bottom:0px">
     </div>
 
 <!-- thumbnail cookie js -->
@@ -159,7 +165,14 @@ $(document).ready(function(){
 </div>
 
 
-      <div id="img_a"/>Drop the Beat</div>
+      <div id="img_a"/>Drop the Beat<br>
+
+      </div>
+      <div>
+      ♬ Now playing -
+      </div>
+      <div id="img_song"/> {{info.title}}
+      </div>
       <!--
       <a href="https://github.com/JooeunAhn/beatsalon" target="_blank"><img src="{% static 'blog/github.png' %}" id="" style="width:50px; height:50px; margin:20px;"></a>
 -->
@@ -251,12 +264,20 @@ $('.dim').click(function(event){
 });
 
 </script>
-
+    <script src="{% static 'js/musicname.js' %}" type="text/javascript"></script>
     <script src="{% static 'js/icon_rotate.js' %}" type="text/javascript"></script>
     <script src="{% static 'js/play_pause.js' %}" type="text/javascript"></script>
     <script src="{% static 'js/img_slider2.js' %}" type="text/javascript"></script>
     <script src="{% static 'js/menu_slider.js' %}" type="text/javascript"></script>
     <script src="{% static 'js/ajax.js' %}" type="text/javascript"></script>
+    <script type = "text/javascript">
+$("#img_song").animateText([
+  {
+    offset: 0,
+    duration: 1000
+  }
+  ]);
+</script>
     </div>
     </div>
     </body>

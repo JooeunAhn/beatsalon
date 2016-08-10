@@ -75,6 +75,19 @@
                 bottom:10px;
                 left: 10px;
             }
+
+            /* song-name*/
+            #img_song{
+                padding: 5px;
+                margin :10px;
+                position: absolute;
+                top:50px;
+                right: 10px;
+                font-family: "Beatsalon";
+                color:grey;
+                font-size: 15px;
+            }
+
 /* Beat Salon part*/
 
             #img_c{
@@ -164,7 +177,8 @@
                 position: relative;
                 top:12px;
                 left: 97%;
-                width:30px;
+                width:40px;
+                height:40px;
             }
 
 
@@ -366,14 +380,17 @@ iframe{
 
 #myBtn{
     position: relative;
-    top:14px;
+    top:9px;
     left: 97%;
-    width:30px;
+    width:40px;
+    height:40px;
     cursor: pointer;
 }
 
 #slideleft{
     cursor: pointer;
+    position: relative;
+    top:9px;
 }
 
 
@@ -414,7 +431,8 @@ iframe{
     padding-top: 100px;
     left: 0;
     top: 0;
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 
@@ -448,7 +466,8 @@ iframe{
     left: 17%;
     width: 900px;
     height:400px;
-    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 
