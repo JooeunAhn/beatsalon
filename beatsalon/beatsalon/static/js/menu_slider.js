@@ -2,8 +2,9 @@
                 showBottom = document.getElementById( 'showBottom' ),
                 img_b = document.getElementById('img_b'),
                 img_c = document.getElementById('img_c'),
-                img_d = document.getElementById('img_d'),
-                closeButton = document.getElementById('range_for_closing'),                body = document.body;
+                img_d = document.getElementById('cat'),
+                closeButton = document.getElementById('range_for_closing'),
+                body = document.body;
 
 
 

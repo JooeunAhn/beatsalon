@@ -1,8 +1,10 @@
-/*            #defaultCanvas0{
-                position: absolute;
-                top:0;
+            #defaultCanvas0{
+/*                position: absolute;*/
+                top:-20px;
                 left:0;
-            }*/
+                z-index: -1;
+            }
+
             .close_tab{
                 position:fixed;
                 bottom:10px;
@@ -18,25 +20,11 @@
                 top:0;
                 left:0;
             }*/
-
+/*
             .scheme{
                 position: absolute;
                 left:260px;
-
-            }
-
-            .next_img{
-                width: 60px;
-                height: 60px;
-                margin-bottom: 40px;
-                margin-right: 40px;
-            }
-
-            .prev_img{
-                width: 60px;
-                height: 60px;
-                margin-bottom: 40px;
-                margin-left: 350px;
+*/
             }
 
             @font-face{
@@ -75,10 +63,11 @@
                 bottom:10px;
                 left: 10px;
             }
-/* Beat Salon part*/
+            /* Beat Salon part*/
 
             #img_c{
                 position: absolute;
+                z-index: 1;
                 bottom: 8px;
                 left: 60px;
                 font-family: "Beatsalon";
@@ -88,9 +77,10 @@
             }
 
 /*powered by Django part*/
-            #img_d{
+            #cat{
+                z-index: 2;
                 position: absolute;
-                bottom: 8px;
+                bottom: 0px;
                 right: 30px;
                 font-family: "Beatsalon";
                 font-size: 20px;
