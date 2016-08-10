@@ -5,10 +5,8 @@ $("#sendcomment form").submit(function(e){
         type: "POST", //http method
         data: $(this).serialize(),
         success: function(data){
-            $('.caption').append('<p id="cmt_title"></p>');
-            $('#cmt_title').html($('#author').val());
 
-            $('.caption').append('<p class="element" id="cmt_content"</p>');
+            $('#cmt_title').html($('#author').val());
             $('#cmt_content').html($('#message').val());
 
 
