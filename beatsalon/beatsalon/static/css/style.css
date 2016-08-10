@@ -361,6 +361,11 @@ iframe{
     top:14px;
     left: 97%;
     width:30px;
+    cursor: pointer;
+}
+
+#slideleft{
+    cursor: pointer;
 }
 
 

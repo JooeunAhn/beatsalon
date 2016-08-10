@@ -2,7 +2,45 @@
 {% load staticfiles %}
 {% block contents %}
 {% load serve_tags %}
+
 <script src="{% static 'js/fullscreen.js' %}" type="text/javascript"></script>
+
+<!--
+<script src="{% static 'js/skech.js' %}" type="text/javascript" id='MyJavaScript'></script>
+-->
+
+<script>
+  $(document).ready(function(){
+      $('#defaultCanvas0').hide();
+      $('#start_display').hide();
+  });
+document.addEventListener("keydown", function(e) {
+  if (e.keyCode == 13) {
+    toggleFullScreen();
+  }
+}, false);
+function toggleFullScreen() {
+  if (!document.fullscreenElement &&    // alternative standard method
+      !document.mozFullScreenElement && !document.webkitFullscreenElement) {  // current working methods
+    if (document.documentElement.requestFullscreen) {
+      document.documentElement.requestFullscreen();
+    } else if (document.documentElement.mozRequestFullScreen) {
+      document.documentElement.mozRequestFullScreen();
+    } else if (document.documentElement.webkitRequestFullscreen) {
+      document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+    }
+  } else {
+    if (document.cancelFullScreen) {
+      document.cancelFullScreen();
+    } else if (document.mozCancelFullScreen) {
+      document.mozCancelFullScreen();
+    } else if (document.webkitCancelFullScreen) {
+      document.webkitCancelFullScreen();
+    }
+  }
+}
+</script>
+>>>>>>> 20d5c9a6b9ef6ad000e0b5209e57546bf60f7aef
 <script>
 var allSketch = function(q){
   q.song;
