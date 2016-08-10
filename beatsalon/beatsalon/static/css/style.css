@@ -51,13 +51,45 @@
             /* Drop the beat*/
             #img_a{
                 padding: 5px;
-                margin :10px;
                 position: absolute;
-                top:33px;
-                right: 10px;
+                top:50px;
+                right: 5px;
                 font-family: "Beatsalon";
                 color:grey;
-                font-size: 15px;
+                font-size: 10px;
+            }
+
+
+
+            #song_flag{
+                display:block;
+                position:absolute;
+                width:110px;
+                right:230px;
+                top:65px;
+                z-index: 999;
+
+            }
+
+            #img_song_container{
+                position:absolute;
+                top:65px;
+                width:500px;
+                right:30px;
+                margin:0 -300px auto;
+                overflow:hidden;
+
+            }
+
+               /* song-name*/
+            #img_song{
+                position:relative;
+                padding: 3px;
+                display:block;
+                font-family: "Beatsalon";
+                color:grey;
+                font-size: 13px;
+                right:0;
             }
 
             #img_b{
@@ -68,17 +100,7 @@
                 left: 10px;
             }
 
-            /* song-name*/
-            #img_song{
-                padding: 5px;
-                margin :10px;
-                position: absolute;
-                top:50px;
-                right: 10px;
-                font-family: "Beatsalon";
-                color:grey;
-                font-size: 15px;
-            }
+
 
 /* Beat Salon part*/
             #img_c{

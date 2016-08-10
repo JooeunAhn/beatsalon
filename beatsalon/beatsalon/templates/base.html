@@ -195,13 +195,31 @@ $(document).ready(function(){
 </div>
 
 
-      <div id="img_a"/>Drop the Beat<br>
+<div id="img_a"/>Drop the Beat<br></div>
 
-      </div>
-      <div>
-      ♬ Now playing -
-      </div>
-      <div id="img_song"/> {{info.title}}</div>
+  <div id="song_flag">♬ Now playing</div>
+
+  <div id="img_song_container">
+    <div id="img_song"/> {{info.title}}</div>
+  </div>
+<script>
+var right=0;
+
+ setInterval(function() {
+
+        right = parseInt($('#img_song').css('right'));
+         $('#img_song').animate({
+            right: '+=1',
+        }, 1, function(){
+            if(right > 300){
+            $('#img_song').css('right','-250px');
+        }
+        });
+    }, 0);
+
+</script>
+
+
       <!--
       <a href="https://github.com/JooeunAhn/beatsalon" target="_blank"><img src="{% static 'blog/github.png' %}" id="" style="width:50px; height:50px; margin:20px;"></a>
 -->
