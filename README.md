@@ -1,5 +1,4 @@
 # Greetings!
-======
 
 This page is based on the Django web framework.
 
@@ -15,9 +14,10 @@ here are some references to the codes we have used:
 https://github.com/jcalazan/youtube-audio-dl
 
 we have used:
-⋅⋅* Django 1.9
-⋅⋅* Processing
-⋅⋅* p5.js
-⋅⋅* youtube-dl
-⋅⋅* django-bootstrap3
+
+* Django 1.9
+* Processing
+* p5.js
+* youtube-dl
+* django-bootstrap3
 
