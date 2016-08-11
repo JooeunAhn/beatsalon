@@ -38,7 +38,7 @@ def serve(request,pk):
     comments = Comment.objects.order_by('pk').reverse()
     ydl_opt = {
             'format':'bestaudio/best',
-            'outtmpl': 'beatsalon/static/data/%(title)s.%(ext)s',
+            'outtmpl': 'beatsalon/static/data/'+pk+'.%(ext)s',
             'postprocessors':[{
                 'key':'FFmpegExtractAudio',
                 'preferredcodec':'mp3',
@@ -54,6 +54,6 @@ def serve(request,pk):
     else:
         with youtube_dl.YoutubeDL(ydl_opt) as ydl:
             info = ydl.extract_info("https://youtu.be/"+pk, download=False)
-
     thumbnail_url = info['thumbnails'][0]["url"]
-    return render(request, 'salon/serve.html', {'info':info, "thumbnail_url":thumbnail_url, 'comments': comments})
+    return render(request, 'salon/serve.html', {'info':info, "thumbnail_url":thumbnail_url, 'comments': comments,
+        'musicId':pk,})
