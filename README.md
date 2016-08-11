@@ -1,5 +1,5 @@
-# Greetings!
-## Welcome to Beat Salon
+# Greetings and Welcome to Beat Salon!
+[check out our awesome project](https://beatsalon.xyx)
 
 This page is based on the Django web framework.
 
