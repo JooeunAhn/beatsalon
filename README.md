@@ -1,4 +1,5 @@
 # Greetings!
+## Welcome to Beat Salon
 
 This page is based on the Django web framework.
 
