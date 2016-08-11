@@ -2,7 +2,7 @@
 body, html {   padding: 0; margin: 0;}
 
 body{
-    background-color: black;
+    background-color: rgba(0,0,0,0.93);
 }
 a {
     text-decoration: none;
@@ -69,7 +69,7 @@ a {
 
 #start_display div{
     position:relative;
-    top:65%;
+    top:50%;
     text-align: center;
 }
 

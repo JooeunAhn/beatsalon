@@ -16,19 +16,7 @@
                 width: 100%;
                 border:solid white 10px;
             }
-/*            #upup{
-                position:relative;
-            }
-            .up_index{
-                position:absolute;
-                top:0;
-                left:0;
-            }*/
-/*
-            .scheme{
-                position: absolute;
-                left:260px;
-*/
+
             }
 
             @font-face{
@@ -137,19 +125,6 @@
                 cursor: pointer;
             }
 
-            #myBtn1{
-                z-index: 2;
-                position: absolute;
-                bottom: 0px;
-                right: 90px;
-                font-family: "Beatsalon";
-                font-size: 20px;
-                color:white;
-                opacity: 0.15;
-                cursor: pointer;
-
-            }
-
             #loading{
                 color:grey;
                 font-size: 20px;
@@ -211,16 +186,6 @@
                 position: absolute;
                 left: 60px;
             }
-
-            #myBtn{
-                position: relative;
-                top:12px;
-                left: 97%;
-                width:40px;
-                height:40px;
-                margin-left: 5px;
-            }
-
 
             #question{
                 width: 30px;
@@ -422,11 +387,13 @@ iframe{
 #myBtn{
     position: relative;
     top:9px;
-    left: 97%;
     width:40px;
     height:40px;
     cursor: pointer;
+    margin-left: 10px;
+    float:right;
 }
+
 
 #slideleft{
     cursor: pointer;
@@ -579,3 +546,11 @@ top:10px;
 right:45px;
 }
 
+.container-fluid{
+    position: absolute;
+    width:100%;
+}
+.inner-container-fluid{
+    position: relative;
+    width:100%;
+}
