@@ -3,30 +3,30 @@
       $('#start_display').hide();
       console.log("fullscreen");
   });
+
+
 document.addEventListener("keydown", function(e) {
   if (e.keyCode == 13) {
-    if(!$('#myModal').is(':visible')&!$('#myModal1').is(':visible')){
-      toggleFullScreen();
+    if (!$('#myModal').is(':visible')&!$('#myModal1').is(':visible')){
+      isCanvasInFullscreen();
     }
   }
 }, false);
-function toggleFullScreen() {
-  if (!document.fullscreenElement &&    // alternative standard method
-      !document.mozFullScreenElement && !document.webkitFullscreenElement) {  // current working methods
-    if (document.documentElement.requestFullscreen) {
-      document.documentElement.requestFullscreen();
-    } else if (document.documentElement.mozRequestFullScreen) {
-      document.documentElement.mozRequestFullScreen();
-    } else if (document.documentElement.webkitRequestFullscreen) {
-      document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
-    }
-  } else {
-    if (document.cancelFullScreen) {
-      document.cancelFullScreen();
-    } else if (document.mozCancelFullScreen) {
-      document.mozCancelFullScreen();
-    } else if (document.webkitCancelFullScreen) {
-      document.webkitCancelFullScreen();
-    }
-  }
+
+
+function isCanvasInFullscreen(){
+
+var canvas_full = document.getElementById("defaultCanvas0");
+
+// go full-screen
+if (canvas_full.requestFullscreen) {
+  canvas_full.requestFullscreen();
+} else if (canvas_full.webkitRequestFullscreen) {
+  canvas_full.webkitRequestFullscreen();
+} else if (canvas_full.mozRequestFullScreen) {
+  canvas_full.mozRequestFullScreen();
+} else if (canvas_full.msRequestFullscreen) {
+  canvas_full.msRequestFullscreen();
+}
+
 }

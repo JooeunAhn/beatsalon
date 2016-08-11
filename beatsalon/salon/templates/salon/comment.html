@@ -1,13 +1,10 @@
+
 {% for comment in comments %}
-<div class="row">
-  <div class="container-fluid">
     <div class="thumbnail">
-      <div class="caption">
-      <p id="cmt_content">{{comment.message}}</p>
-        <p class="element" id="cmt_title"> - by {{comment.author}} 님</p>
-        {{ comment.created_at |date:"Y/m/d, g:i a" }}
-      </div>
+        <div class="caption">
+            <p id="cmt_content">{{comment.message}}</p>
+            <p class="element" id="cmt_title"> - by {{comment.author}} 님</p>
+            {{ comment.created_at |date:"Y/m/d, g:i a" }}
+        </div>
     </div>
-  </div>
-</div>
 {% endfor %}

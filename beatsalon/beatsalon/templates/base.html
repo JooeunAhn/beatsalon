@@ -83,9 +83,9 @@
         </div>
         <div id="allcomments" class="tab-pane fade">
         <br>
-        {% for comment in comments %}
         <div class="row">
-          <div class="container-fluid">
+          <div class="container-fluid" id="for_comment">
+          {% for comment in comments %}
             <div class="thumbnail">
               <div class="caption">
               <p id="cmt_content">{{comment.message}}</p>
@@ -93,9 +93,9 @@
                 {{ comment.created_at |date:"Y/m/d, g:i a" }}
               </div>
             </div>
+          {% endfor %}
           </div>
         </div>
-       {% endfor %}
         </div>
         <div id = "result"></div>
     </div>
@@ -106,7 +106,7 @@
 <div id="myModal2" class="modal2" style="display:none">
   <div class="modal-content2">
    <center>
-    <img class="close2" src={% static 'blog/X.png' %} >
+    <img class="close2" src="{% static 'blog/X.png' %}" >
 
     <div class="tab-content">
 <br>
@@ -130,7 +130,7 @@
         <div id='creators'>
             <img class="img-circle" src="{% static 'img/4.png' %}" alt="" style="width:100px;" id='ourface'><br><br>
             <p id='name'>이혜린</p>
-            <p id='name'> Hyerin Lee</p>
+            <p id='name'> Hyerin Rhee</p>
         </div>
         <div id='creators'>
             <img class="img-circle" src="{% static 'img/5.png' %}" alt="" style="height:100px;" id='ourface'><br><br>
@@ -148,38 +148,8 @@
   </div>
 </div>
 
-<script>
-$('.add_comment').on('click', function(e) {
-if ($('.form-control').val() == ''){
-    return
-}
-$.ajax({
-    url: $(location).attr('href'),
-    type: 'POST',
-    data: {
-        'message': $('#id_message').val(),
-        'author' : $("#id_author").val(),
-        'csrfmiddlewaretoken': $('input[name=csrfmiddlewaretoken]').val(),
-        'formtype': 'comment-add',
-    },
-    success: function(data) {
-        if (data){
-            $('.form-control').val('')
-            $('#allcomments').html(data)
-        }
-        else{
-            console.error('No data');
-        }
-    },
-    error: function(xhr,errmsg,err) {
-        $('#results').html('<div class="alert alert-danger">에러가 발생했습니다 : '+errmsg+'('+xhr.status+')'+'<a href="javascript:void(0)" class="close" data-dismiss="alert" aria-label="close">&times;</a></div>')
-    },
-    complete: function() {
-        $.getScript(edit(), function() {})
-    }
-})
-})
-</script>
+
+
 
 <!--playlist-->
     <div class="container-fluid">
