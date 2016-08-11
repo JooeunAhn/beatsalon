@@ -530,7 +530,10 @@ iframe{
 }
 
 
-body{background-color: rgb(20,20,20)}
+body{
+    background-color: rgb(20,20,20);
+    overflow: hidden;
+}
 
 .clip-circle{
 clip-path: circle(20px at center);
