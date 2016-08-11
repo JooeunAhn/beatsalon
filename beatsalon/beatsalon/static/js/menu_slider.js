@@ -3,15 +3,12 @@
                 img_b = document.getElementById('img_b'),
                 img_c = document.getElementById('img_c'),
                 img_d = document.getElementById('cat'),
+
                 img_e = document.getElementById('myBtn1')
                 closeButton = document.getElementById('range_for_closing'),
                 body = document.body;
                 var count=true;
-
-
-
             showBottom.onclick = function() {
-
                 classie.toggle( this, 'active' );
                 classie.toggle( menuBottom, 'cbp-spmenu-open' );
 
@@ -19,16 +16,15 @@
                 img_c.style.display="none";
                 img_d.style.display="none";
                 img_e.style.display="none";
+
                 disableOther( 'showBottom' );
                 count=false;
             };
 
-
-
             closeButton.onclick = function(){
-
                classie.toggle(this, 'active');
                classie.toggle(menuBottom, 'cbp-spmenu-open');
+
                if(count==true){
                   img_b.style.display="none";
                    img_c.style.display="none";
@@ -43,23 +39,7 @@
                    img_e.style.display="block";
                    count=true;
                }
-
             };
 
-// 도와주세요 개발자님들  ~..~
-// $( "#close_tab" )
-//   .mouseenter(function() {
-//                 classie.toggle(this, 'active');
-//                 classie.toggle( menuBottom, 'cbp-spmenu-open' );
-//                 img_b.style.display="none";
-//                 img_c.style.display="none";
-//                 img_d.style.display="none";
-//                 disableOther( 'showBottom' );
-//   })
-//   .mouseleave(function() {
-//               classie.toggle(this, 'active');
-//                classie.toggle(menuBottom, 'cbp-spmenu-open');
-//                img_b.style.display="block";
-//                img_c.style.display="block";
-//                img_d.style.display="block";
-//   });
+
+

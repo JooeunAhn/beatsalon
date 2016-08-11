@@ -4,8 +4,6 @@
 {% load serve_tags %}
 
 
-
-
 <script>
 //////////여기에 p5스케치//////////////////////////////////
 var allSketch = function(q){
@@ -44,8 +42,9 @@ var allSketch = function(q){
   var randomBeat=false;
 
   q.preload=function(){
-      q.song=q.loadSound({% with 'data/'|add:info.title|add:'.mp3'|to_underbar as music_static %}"{% static music_static %}"{% endwith %});
-    }
+
+    q.song=q.loadSound({% with 'data/'|add:musicId|add:".mp3" as music_static %}"{% static music_static %}"{% endwith %});}
+
   q.setup=function(){
     q.createCanvas(q.windowWidth,q.windowHeight,q.WEBGL);
     q.song.play();
@@ -600,7 +599,7 @@ var allSketch = function(q){
 
 <!--현중이 play/pause 잠깐지우우움
 <div class = "play_button">
-    <img class="play" src="{% static 'blog/X.png' %}">
+    <img class ="play next_music" src="{% static 'img/next.png' %}">
 </div>
 <h2 style="position: absolute;
           top: 10%;
@@ -628,6 +627,15 @@ var allSketch = function(q){
 
 <script>
 new p5(allSketch);
+
+$(".next_music").click(function() {
+  play_list = getCookie("play_list")
+  play_list = play_list.split(',')
+  if (play_list[0]){
+    serve = "/serve/"+play_list[0].slice(23,34);
+    $(location).attr("href",serve);
+  }
+});
 </script>
 
 

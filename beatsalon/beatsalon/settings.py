@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'salon',
     ##Third party app
     'youtube_dl',
+    'bootstrap3'
 ]
 
 MIDDLEWARE_CLASSES = [

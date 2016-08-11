@@ -137,6 +137,19 @@
                 cursor: pointer;
             }
 
+            #myBtn1{
+                z-index: 2;
+                position: absolute;
+                bottom: 0px;
+                right: 90px;
+                font-family: "Beatsalon";
+                font-size: 20px;
+                color:white;
+                opacity: 0.15;
+                cursor: pointer;
+
+            }
+
             #loading{
                 color:grey;
                 font-size: 20px;
@@ -549,7 +562,10 @@ iframe{
 }
 
 
-body{background-color: rgb(20,20,20)}
+body{
+    background-color: rgb(20,20,20);
+    overflow: hidden;
+}
 
 .clip-circle{
     clip-path: circle(20px at center);
