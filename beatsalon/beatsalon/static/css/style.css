@@ -1,3 +1,6 @@
+
+
+
            .onlyimg{
             display: inline-block;
            }
@@ -118,6 +121,18 @@
                 position: absolute;
                 bottom: 10px;
                 right: 60px;
+                font-family: 'BeatSalon';
+                font-size: 20px;
+                color: white;
+                opacity: 0.3;
+                cursor: pointer;
+            }
+
+            #myBtn2{
+                z-index: 2;
+                position: absolute;
+                bottom: 10px;
+                right: 105px;
                 font-family: 'BeatSalon';
                 font-size: 20px;
                 color: white;
@@ -262,6 +277,18 @@
                 overflow: scroll;
             }
 
+              .modal-content2 {
+                padding: 2px 16px;
+                background-color: black;
+                opacity:0.9;
+                border: 1px solid #888;
+                position: absolute;
+                left: 17%;
+                width: 900px;
+                height:400px;
+                overflow: scroll;
+            }
+
 
 
             /* The Close Button */
@@ -282,6 +309,14 @@
             }
 
 
+            .close2 {
+                position: relative;
+                top:5px;
+                width: 40px;
+                color: #aaaaaa;
+                float: right;
+                width:20px;
+            }
 
             .close:hover,
 
@@ -445,6 +480,24 @@ iframe{
     overflow-y: scroll;
 }
 
+.modal2 {
+    display: none;
+    position: absolute;
+    left: 90%;
+    right: 0;
+    top: 0px;
+    bottom: 0;
+    width:1300px;
+    height:800px;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+
 
 #add_1{
     display: inline;
@@ -480,6 +533,18 @@ iframe{
     overflow-y: scroll;
 }
 
+.modal-content2 {
+    padding: 2px 16px;
+    background-color: black;
+    opacity:0.9;
+    border: 1px solid #888;
+    position: absolute;
+    left: 17%;
+    width: 900px;
+    height:400px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
 
 
 /* The Close Button */
@@ -494,6 +559,12 @@ iframe{
 }
 
 .close1 {
+    padding-top: 3px;
+    width: 20px;
+    color: #aaaaaa;
+    float: right;
+}
+.close2 {
     padding-top: 3px;
     width: 20px;
     color: #aaaaaa;
@@ -554,3 +625,13 @@ right:45px;
     position: relative;
     width:100%;
 }
+
+        h3#creator-title{color:white}
+        div#imagecontainer{color:white; }
+        div#imagecontainer #creators{display: inline-block; width:150px;height:200px; text-align: center; vertical-align: top;}
+        div#imagecontainer img#ourface{
+        clip-path: circle(50px at center);
+        -webkit-clip-path: circle(50px at center);
+        }
+
+
