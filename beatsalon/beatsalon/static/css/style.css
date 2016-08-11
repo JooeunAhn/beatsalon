@@ -117,12 +117,24 @@
             #cat{
                 z-index: 2;
                 position: absolute;
-                bottom: 0px;
-                right: 30px;
+                bottom: 10px;
+                right: 15px;
                 font-family: "Beatsalon";
                 font-size: 20px;
                 color:white;
-                opacity: 0.7;
+                opacity: 0.3;
+            }
+
+            #myBtn1{
+                z-index: 2;
+                position: absolute;
+                bottom: 10px;
+                right: 60px;
+                font-family: 'BeatSalon';
+                font-size: 20px;
+                color: white;
+                opacity: 0.3;
+                cursor: pointer;
             }
 
             #loading{
@@ -193,6 +205,7 @@
                 left: 97%;
                 width:40px;
                 height:40px;
+                margin-left: 5px;
             }
 
 
@@ -201,6 +214,7 @@
                 position: absolute;
                 left: 480px;
                 top:25px;
+                opacity: 0.5;
 
             }
 
@@ -405,6 +419,8 @@ iframe{
     cursor: pointer;
     position: relative;
     top:9px;
+    opacity: 0.7;
+    margin-right: 4px;
 }
 
 
@@ -488,10 +504,13 @@ iframe{
 
 /* The Close Button */
 .close {
-    padding-top:10px;
-    width: 5%;
-    color: #aaaaaa;
+    margin-top:15px;
+    margin-left: 10px;
+    /*width: 5%;*/
+    /*color: #aaaaaa;*/
+    color:#000;
     float: right;
+    width:20px;
 }
 
 .close1 {
@@ -533,12 +552,14 @@ iframe{
 body{background-color: rgb(20,20,20)}
 
 .clip-circle{
-clip-path: circle(20px at center);
--webkit-clip-path: circle(20px at center);
+    clip-path: circle(20px at center);
+    -webkit-clip-path: circle(20px at center);
+    margin-right: 5px;
 }
+
 .playlist{
 position: absolute;
 top:10px;
-right:65px;
+right:45px;
 }
 

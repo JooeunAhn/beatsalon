@@ -1,10 +1,13 @@
   $(document).ready(function(){
       $('#defaultCanvas0').hide();
+      $('#start_display').hide();
+      console.log("fullscreen");
   });
 document.addEventListener("keydown", function(e) {
   if (e.keyCode == 13) {
-    if ('#myModal1' && '#myModal'). on('hidden.bs.modal', function(e){
+    if(!$('#myModal').is(':visible')&!$('#myModal1').is(':visible')){
       toggleFullScreen();
+    }
   }
 }, false);
 function toggleFullScreen() {

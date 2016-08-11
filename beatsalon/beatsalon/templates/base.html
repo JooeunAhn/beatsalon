@@ -15,8 +15,9 @@
        <script src = "https://code.jquery.com/jquery-2.1.3.min.js"></script>
        <!-- Youtube api -->
        <script src = "{% static 'js/app.js' %}"></script>
-       <script src = "{% static 'js/fullscreen.js' %}"></script>
+
        <script src = "https://apis.google.com/js/client.js?onload=init" ></script>
+<!--
 <script type = "text/javascript">
 $("#img_song").animateText([
   {
@@ -24,23 +25,26 @@ $("#img_song").animateText([
     duration: 1000
   }
   ]);
-</script>
+</script>-->
       <!-- start_merge with hyerin -->
       <script src="{% static 'js/classie.js' %}" type="text/javascript"></script>
      <script src="{% static 'js/modernizr.custom.js' %}"></script>
      <!--ajax-->
      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <!--do not touch-->
+
     <style type='text/css'>
       body {padding: 0; margin: 0;}
-       div.buttonclass{position: absolute;}
-      div.buttonclass div.onlybutton{position: relative; z-index: 100;}
-      div.buttonclass div.onlybutton div{display: inline-block;}
-      div.buttonclass div.onebutton div{z-index: 400;}
-      div.buttonclass div.onlyimg{position: absolute;top:0; z-index: 0;}
-      div.buttonclass div.onlyimg img{display: inline-block;}
+      div.buttonclass{bottom:30px;}
+      div.buttonclass div.onlybutton{position:absolute;z-index: 100;z-index: 400;left:190px;}
+      div.buttonclass div.onlybutton div{display: inline-block;margin-right: 10px;}
+      div.buttonclass div.onlybutton div:last-child{margin-right: 0;}
+      div.buttonclass div.onlyimg{top:0; z-index: 0;}
+      div.buttonclass div.onlyimg img{display: inline-block;margin-right: 10px;}
+      div.buttonclass div.onlyimg img:last-child{margin-right: 0px;}
       canvas{z-index: -100;}
     </style>
+
 
   </head>
   <body>
@@ -56,7 +60,7 @@ $("#img_song").animateText([
   <script>
   $(document).ready(function(){
 
-      var start_display = '<div id = "start_display">'+'<div id ="main_title1" >welcome to the</div>'+ '<div id="main_title2">BEAT SALON<sub>&#9400;</sub></div>'+'<div><a href="#" id="salon_start"><span>start</span></a></div></div>';
+      var start_display = '<div id = "start_display">'+'<div id ="main_title1" >welcome to the</div>'+ '<div id="main_title2">BEAT SALON<sub>&#9400;</sub></div>'+'<div><a href="#" id="salon_start"><span>enter</span></a></div></div>';
       console.log("window loaded")
 /*
       $('body').append(start_display);
@@ -148,31 +152,41 @@ $(document).ready(function(){
   }
 });
 </script>
-
-  <a href="https://github.com/JooeunAhn/beatsalon" target="_blank"><img src="{% static 'blog/github.png' %}" id="cat" style="width:50px; height:50px; margin:20px;"></a>
+  <img src="{% static 'img/speech-bubble.png' %}" id='myBtn1' style='width:30px; height:30px;'alt="">
+  <a href="https://github.com/JooeunAhn/beatsalon" target="_blank"><img src="{% static 'blog/github-white.png' %}" id="cat" style="width:30px; height:30px;"></a>
 
 <!-- div for closing the bottom menu slide -->
 <div id="range_for_closing">
 
 </div>
 <!-- # bottom menu slide  -->
+
+
 <div class="cbp-spmenu cbp-spmenu-horizontal cbp-spmenu-bottom" id="cbp-spmenu-s4">
+<!--
   <button id="myBtn1" style="left:0px;">Leave Comments</button>
-  <a href="#" class="control_next"><img class="next_img" src="{% static 'img/next.png' %}"/></a>
-  <a href="#" class="control_prev"><img class="prev_img" src="{% static 'img/prev.png' %}"/></a>
+-->
 
-
+  <!--메뉴안에 스케치 슬라이더 코멘트
+  <a href="#" class="control_next"><img class="next_img" src="{% static 'img/next.png' %}" style='width:20px; height:40px;'/></a>
+  <a href="#" class="control_prev"><img class="prev_img" src="{% static 'img/prev.png' %}" style='width:20px; height:40px;'/></a>
+  -->
   <!--do not touch-->
+  <!--스케치 버튼 serve.html로 이동, 이미지만 두-->
   <div class="buttonclass">
      <div class="onlybutton">
         <div id='button1'></div>
         <div id='button2'></div>
         <div id='button3'></div>
+        <div id='button4'></div>
       </div>
+
+
       <div class="onlyimg">
           <img src="{% static 'assets/movingbox.png' %}" alt="" style="width:232px; height:140px; display: inline-block;" id='button1'/>
           <img src="{% static 'assets/spreading.png' %}" alt="" style="width:232px; height:140px;display: inline-block;" id='button2'/>
           <img src="{% static 'assets/random.png' %}" alt="" style="width:232px; height:140px;" id='button3'/>
+          <img src="{% static 'assets/shootingball.png' %}" alt="" style="width:232px; height:140px;" id='button3'/>
       </div>
     </div>
 
@@ -197,21 +211,21 @@ $(document).ready(function(){
 
 <div id="img_a"/>Drop the Beat<br></div>
 
-  <div id="song_flag">♬ Now playing</div>
 
   <div id="img_song_container">
     <div id="img_song"/> {{info.title}}</div>
   </div>
 <script>
 var right=0;
-
+var width=0;
  setInterval(function() {
 
         right = parseInt($('#img_song').css('right'));
+        width = parseInt($('#img_song').css('width'));
          $('#img_song').animate({
             right: '+=1',
         }, 1, function(){
-            if(right > 300){
+            if(right > width){
             $('#img_song').css('right','-250px');
         }
         });
@@ -310,19 +324,24 @@ $('.dim').click(function(event){
 });
 
 </script>
+<script>
+  window.onkeydown=function(e){
+    if(e.keyCode==32&& e.target==document.body){
+      e.preventDefault();
+      return false;
+    }
+  };
+</script>
+
     <script src="{% static 'js/musicname.js' %}" type="text/javascript"></script>
     <script src="{% static 'js/icon_rotate.js' %}" type="text/javascript"></script>
     <script src="{% static 'js/play_pause.js' %}" type="text/javascript"></script>
     <script src="{% static 'js/img_slider2.js' %}" type="text/javascript"></script>
     <script src="{% static 'js/menu_slider.js' %}" type="text/javascript"></script>
     <script src="{% static 'js/ajax.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/fullscreen.js' %}"></script>
     <script type = "text/javascript">
-$("#img_song").animateText([
-  {
-    offset: 0,
-    duration: 1000
-  }
-  ]);
+
 </script>
     </div>
     </div>
