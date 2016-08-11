@@ -16,14 +16,6 @@
        <!-- Youtube api -->
        <script src = "{% static 'js/app.js' %}"></script>
        <script src = "https://apis.google.com/js/client.js?onload=init" ></script>
-<script type = "text/javascript">
-$("#img_song").animateText([
-  {
-    offset: 0,
-    duration: 1000
-  }
-  ]);
-</script>
       <!-- start_merge with hyerin -->
       <script src="{% static 'js/classie.js' %}" type="text/javascript"></script>
      <script src="{% static 'js/modernizr.custom.js' %}"></script>
@@ -148,6 +140,7 @@ $(document).ready(function(){
 });
 </script>
 
+  <img src="{% static 'img/speech-bubble.png' %}" id="myBtn1" style="width:47px; height:55px; margin:17px;">
   <a href="https://github.com/JooeunAhn/beatsalon" target="_blank"><img src="{% static 'blog/github.png' %}" id="cat" style="width:50px; height:50px; margin:20px;"></a>
 
 <!-- div for closing the bottom menu slide -->
@@ -156,7 +149,7 @@ $(document).ready(function(){
 </div>
 <!-- # bottom menu slide  -->
 <div class="cbp-spmenu cbp-spmenu-horizontal cbp-spmenu-bottom" id="cbp-spmenu-s4">
-  <button id="myBtn1" style="left:0px;">Leave Comments</button>
+ <!--  <img src="{% static 'img/next.png' %}" id="byBtn1" style="left:0px;"> -->
   <a href="#" class="control_next"><img class="next_img" src="{% static 'img/next.png' %}"/></a>
   <a href="#" class="control_prev"><img class="prev_img" src="{% static 'img/prev.png' %}"/></a>
 
@@ -317,12 +310,6 @@ $('.dim').click(function(event){
     <script src="{% static 'js/ajax.js' %}" type="text/javascript"></script>
     <script src = "{% static 'js/fullscreen.js' %}"></script>
     <script type = "text/javascript">
-$("#img_song").animateText([
-  {
-    offset: 0,
-    duration: 1000
-  }
-  ]);
 </script>
     </div>
     </div>

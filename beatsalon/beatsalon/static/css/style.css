@@ -125,6 +125,19 @@
                 opacity: 0.7;
             }
 
+            #myBtn1{
+                z-index: 2;
+                position: absolute;
+                bottom: 0px;
+                right: 90px;
+                font-family: "Beatsalon";
+                font-size: 20px;
+                color:white;
+                opacity: 0.15;
+                cursor: pointer;
+
+            }
+
             #loading{
                 color:grey;
                 font-size: 20px;

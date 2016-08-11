@@ -3,6 +3,7 @@
                 img_b = document.getElementById('img_b'),
                 img_c = document.getElementById('img_c'),
                 img_d = document.getElementById('cat'),
+                img_e = document.getElementById('cat'),
                 closeButton = document.getElementById('range_for_closing'),
                 body = document.body;
                 var count =true;
@@ -14,6 +15,7 @@
                 img_b.style.display="none";
                 img_c.style.display="none";
                 img_d.style.display="none";
+                img_e.style.display="none";
                 count =false;
                 // disableOther( 'showBottom' ); disable Other is not defined
             };
