@@ -1,5 +1,5 @@
 # Greetings and Welcome to Beat Salon!
-[check out our awesome project](https://beatsalon.xyx)
+[check out our awesome project](https://beatsalon.xyx)!
 
 This page is based on the Django web framework.
 
@@ -10,6 +10,10 @@ The search function shows the top viewed videos and returns them to the modal fr
 In order to make this page, our team has used the Youtube API, the program Processing as well as P5.js to visualize the music into the screen.
 
 Have fun with it and please leave comments on our page!
+
+### We had some difficulties making our project compatible to mobile webapps.
+### (ex. safari/ chrome mobile)
+### If possible, use the site on full screen!
 
 here are some references to the codes we have used:
 
