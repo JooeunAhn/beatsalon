@@ -26,14 +26,19 @@
 
     <style type='text/css'>
       body {padding: 0; margin: 0;}
-      div.buttonclass{bottom:30px;width:100%;text-align: center;}
-      div.buttonclass div.innerbuttonclass{position: relative;width:1000px;text-align: center; left:12.5%;}
-      div.buttonclass div.onlybutton{position:absolute;z-index: 400;left:10px;}
-      div.buttonclass div.onlybutton div{display: inline-block;margin-right: 10px;}
-      div.buttonclass div.onlybutton div:last-child{margin-right: 0;}
-      div.buttonclass div.onlyimg{top:0; z-index: 0;}
+      div.buttonclass{bottom:30px;width:100%;text-align: center;border:1px solid yellow;}
+
+      div.buttonclass div.innerbuttonclass{position: relative; border:1px solid red;}
+
+      div.buttonclass div.onlyimg{top:0; z-index: 0;border: 1px solid green;}
       div.buttonclass div.onlyimg img{display: inline-block;margin-right: 10px;}
       div.buttonclass div.onlyimg img:last-child{margin-right: 0px;}
+
+      div.buttonclass div.onlybutton{position:absolute;z-index: 400;border:1px solid blue;width:1000px;left: 50%;margin-left: -485px;padding:0;}
+      div.buttonclass div.onlybutton div{display: inline-block;margin-right: 10px;}
+      div.buttonclass div.onlybutton div:last-child{margin-right: 0;}
+
+
       canvas{z-index: -100;}
     </style>
 
