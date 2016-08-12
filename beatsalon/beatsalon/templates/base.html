@@ -28,13 +28,13 @@
       body {padding: 0; margin: 0;}
       div.buttonclass{bottom:30px;width:100%;text-align: center;}
 
-      div.buttonclass div.innerbuttonclass{position: relative;}
+      div.buttonclass div.innerbuttonclass{position: relative;top:10px;}
 
       div.buttonclass div.onlyimg{top:0; z-index: 0;}
-      div.buttonclass div.onlyimg img{display: inline-block;margin-right: 10px;}
+      div.buttonclass div.onlyimg img{display: inline-block;margin-right: 10px;border:2px solid white;}
       div.buttonclass div.onlyimg img:last-child{margin-right: 0px;}
 
-      div.buttonclass div.onlybutton{position:absolute;z-index: 400;width:1000px;left: 50%;margin-left: -485px;padding:0;}
+      div.buttonclass div.onlybutton{position:absolute;z-index: 400;width:1000px;left: 50%;margin-left: -490px;padding:0;}
       div.buttonclass div.onlybutton div{display: inline-block;margin-right: 10px;}
       div.buttonclass div.onlybutton div:last-child{margin-right: 0;}
 
@@ -51,12 +51,7 @@
 
       var start_display = '<div id = "start_display">'+'<div id ="main_title1" >welcome to the</div>'+ '<div id="main_title2">BEAT SALON<sub>&#9400;</sub></div>'+'<div><a href="#" id="salon_start"><span>enter</span></a></div></div>';
       console.log("window loaded")
-/*
-      $('body').append(start_display);
-      $('body').on('click', '#start_display', function(){
-      $('#start_display').hide();
-      });
-*/
+
       $('body').append(start_display);
       $('#salon_start').click(function(){
         $('#start_display').hide();
@@ -246,7 +241,7 @@ var width=0;
       <div class="button_default" id="bottom">
         <a href="#" id="showBottom">
         <img src="{% static 'img/sketch_menu.png' %}" id="img_b"/>
-        <div id="img_c">BEAT SALON</div>
+        <div id="img_c">BEAT SALON<span style='font-size:10px;'>&copy;</span></div>
         </a>
       </div>
 

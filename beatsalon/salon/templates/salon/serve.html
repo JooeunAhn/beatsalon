@@ -408,19 +408,9 @@ var allSketch = function(q){
         else if(rand_amp>0.05 ){
             q.randombox.push(new q.randomBox(q.random(-1000,0),70,q.random(0,-300), q.random(15,20),q.color(q.random(150,200),q.random(0,40),20,200)));
         }
-
-        // if(rand_amp>0.003){
-        //     q.randombox.push(new q.randomBox(q.random(-800,0),q.random(0,-1000), q.random(20),q.color(q.random(150,255),q.random(0,150),20,200)));
-        // }
-        if (randomBeat){
-          // q.randombox.push(new q.randomBox(q.random(-800,0),q.random(0,-1000), q.random(20),q.color(q.random(150,255),q.random(0,150),20,200)));
-        }
         if (q.randombox.length>30){
             q.randombox.splice(0,1);
           }
-        // if(rand_amp<0.02){
-        //   q.randombox.splice(0,q.randombox.length-1);
-        // }
       }
 
     }//////////////end random appear box////////////////////
@@ -439,7 +429,6 @@ var allSketch = function(q){
         this.freq = q.fft.analyze();
         this.range = this.freq.length/this.numOfRange; //1024/30
         this.randomamp=q.amplitude.getLevel();
-        // this.boxh=map(randomamp,0,1,10,300);
         this.boxh=q.map(q.fft.getEnergy(this.range*this.randomnum,this.range*this.randomnum+this.range),0,255,0,400);
         q.push();
         q.translate(this.x,this.y-this.boxh/2,this.z);
@@ -595,17 +584,6 @@ var allSketch = function(q){
 
 //////////여기까지 p5스케치//////////////////////////////////
 </script>
-<!--play/pause-->
-
-<!--현중이 play/pause 잠깐지우우움
-<div class = "play_button">
-    <img class ="play next_music" src="{% static 'img/next.png' %}">
-</div>
-<h2 style="position: absolute;
-          top: 10%;
-          width:100%;
-          color:white;" class="song_title" style="color:white;">{{info.title}}</h2>
--->
 
 <div id="myModal" class="modal">
   <!-- Modal content -->
