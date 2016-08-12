@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'salon',
     ##Third party app
     'youtube_dl',
-    'bootstrap3',
+    'bootstrap3'
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -127,6 +127,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 STATIC_URL = '/static/'
 STATICFILES_DIRS=[
         os.path.join(BASE_DIR,'beatsalon','static'),

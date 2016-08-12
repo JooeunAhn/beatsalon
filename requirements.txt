@@ -1,4 +1,2 @@
-django=1.9
-youtube-dl
-django-boostrap3
 
+-r reqs/prod.txt
