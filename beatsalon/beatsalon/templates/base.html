@@ -26,15 +26,15 @@
 
     <style type='text/css'>
       body {padding: 0; margin: 0;}
-      div.buttonclass{bottom:30px;width:100%;text-align: center;border:1px solid yellow;}
+      div.buttonclass{bottom:30px;width:100%;text-align: center;}
 
-      div.buttonclass div.innerbuttonclass{position: relative; border:1px solid red;}
+      div.buttonclass div.innerbuttonclass{position: relative;}
 
-      div.buttonclass div.onlyimg{top:0; z-index: 0;border: 1px solid green;}
+      div.buttonclass div.onlyimg{top:0; z-index: 0;}
       div.buttonclass div.onlyimg img{display: inline-block;margin-right: 10px;}
       div.buttonclass div.onlyimg img:last-child{margin-right: 0px;}
 
-      div.buttonclass div.onlybutton{position:absolute;z-index: 400;border:1px solid blue;width:1000px;left: 50%;margin-left: -485px;padding:0;}
+      div.buttonclass div.onlybutton{position:absolute;z-index: 400;width:1000px;left: 50%;margin-left: -485px;padding:0;}
       div.buttonclass div.onlybutton div{display: inline-block;margin-right: 10px;}
       div.buttonclass div.onlybutton div:last-child{margin-right: 0;}
 
@@ -67,14 +67,14 @@
 <!--comment modal-->
   <div id="myModal1" class="modal1" style="display:none">
   <div class="modal-content1">
-    <img class="close1" src={% static 'blog/X.png' %} >
-    <div class="container">
+    <img class="close1" src="{% static 'blog/X.png' %}" >
+    <div class="container" id='navtab'>
       <ul class="nav nav-tabs">
         <li class="active">
-            <a data-toggle="tab" href="#sendcomment" id="comment1" style="color:grey; margin:3px;">한줄 코멘트</a>
+            <a data-toggle="tab" href="#sendcomment" id="comment1" style="color:grey; margin:3px;">Comment</a>
         </li>
          <li>
-            <a data-toggle="tab" href="#allcomments" style="color:grey;margin:3px;">모든 코멘트</a>
+            <a data-toggle="tab" href="#allcomments" style="color:grey;margin:3px;">All Comments</a>
           </li>
       </ul>
     </div>
@@ -83,7 +83,7 @@
             <form action="" method="post">
               {% csrf_token %}
               {% bootstrap_form form %}
-              <button type="submit" class="add_comment btn btn-default">댓글달기</button>
+              <button type="submit" class="add_comment btn btn-default">Send!</button>
             </form>
         </div>
         <div id="allcomments" class="tab-pane fade">
@@ -145,8 +145,8 @@
 
     </div>
    <br>
-    <p id='created_at' style="color:white">created on August 12th 2016</p>
-    <p id='poweredby' style="color:white">powered by P5.JS &amp; DJANGO</p>
+    <p id='created_at' style="color:white; font-family: 'BeatSalon';">created on August 12th 2016</p>
+    <p id='poweredby' style="color:white; font-family: 'BeatSalon';">powered by P5.JS &amp; DJANGO</p>
 
    </center>
     </div>
@@ -277,20 +277,30 @@ var width=0;
     var btn = document.getElementById("myBtn");
     var btn1 = document.getElementById("myBtn1");
     var btn2 = document.getElementById("myBtn2");
+    var tmp1 = false;
+    var tmp2 = false;
+
 
 
     // When the user clicks the button, open the modal
     btn.onclick = function() {
-        console.log("goood!")
         modal.style.display = "block";
     }
 
     btn1.onclick = function() {
+      if (tmp2==true){
+        modal2.style.display = "none";
+      }
         modal1.style.display = "block";
+        tmp1=true;
     }
 
     btn2.onclick = function() {
+      if (tmp1==true){
+        modal1.style.display = "none";
+      }
         modal2.style.display = "block";
+        tmp2=true;
     }
 
     // When the user clicks on <span> (x), close the modal
@@ -300,10 +310,12 @@ var width=0;
 
     $('.close1').click(function(){
         modal1.style.display = "none";
+        tmp1=false;
       });
 
     $('.close2').click(function(){
         modal2.style.display = "none";
+        tmp2=false;
       });
 
     // When the user clicks anywhere outside of the modal, close it
