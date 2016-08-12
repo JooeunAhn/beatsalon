@@ -20,6 +20,8 @@ Here are some references to the codes we have used:
 
 https://github.com/jcalazan/youtube-audio-dl
 
+https://github.com/therewasaguy/p5-music-viz
+
 We have used:
 
 * Django 1.9
