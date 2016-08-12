@@ -13,7 +13,7 @@ Have fun with it and please leave comments on our page!
 
 ### We had some difficulties making our project compatible to mobile webapps.
 ### (ex. safari/ chrome mobile)
-### if possible, use the site on full screen!
+### If possible, use the site on full screen!
 
 here are some references to the codes we have used:
 
