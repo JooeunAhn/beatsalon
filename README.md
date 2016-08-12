@@ -11,7 +11,8 @@ In order to make this page, our team has used the Youtube API, the program Proce
 
 Have fun with it and please leave comments on our page!
 
-### we had some difficulties making our project compatible to mobile webapps (ex. safari/ chrome mobile)
+### We had some difficulties making our project compatible to mobile webapps.
+### (ex. safari/ chrome mobile)
 ### if possible, use the site on full screen!
 
 here are some references to the codes we have used:
