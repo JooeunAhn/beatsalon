@@ -1,5 +1,6 @@
 # Greetings and Welcome to Beat Salon!
-[check out our awesome project](https://beatsalon.xyx)!
+
+[beatsalon.xyz](https://beatsalon.xyx) <---- check out our awesome project!
 
 This page is based on the Django web framework.
 
@@ -11,9 +12,8 @@ In order to make this page, our team has used the Youtube API, the program Proce
 
 Have fun with it and please leave comments on our page!
 
-### We had some difficulties making our project compatible to mobile webapps.
-### (ex. safari/ chrome mobile)
-### If possible, use the site on full screen!
+We had some difficulties making our project compatible to mobile webapps.(ex. safari/ chrome mobile)
+If possible, use the site on full screen!
 
 here are some references to the codes we have used:
 
@@ -27,3 +27,8 @@ we have used:
 * youtube-dl
 * django-bootstrap3
 * ffmpeg
+
+
+
+####Developed by ByungJae Kim, KyungYun Lee, Jooeun Ahn, Hyerin Rhee, Hyun Joong Kim 
+####Launched on August 12th, 2016 
