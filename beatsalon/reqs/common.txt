@@ -1,3 +1,4 @@
-django=1.9.8
+django==1.9.8
 youtube-dl
-django-boostrap3
+django-bootstrap3
+libav
