@@ -1,4 +1,4 @@
-# Greetings and Welcome to Beat Salon!
+# Greetings and Welcome to BEAT SALON&copy;!
 
 [beatsalon.xyz](https://beatsalon.xyx) <---- check out our awesome project!
 
@@ -13,13 +13,14 @@ In order to make this page, our team has used the Youtube API, the program Proce
 Have fun with it and please leave comments on our page!
 
 We had some difficulties making our project compatible to mobile webapps.(ex. safari/ chrome mobile)
-If possible, use the site on full screen!
 
-here are some references to the codes we have used:
+####If possible, use the site on full screen!
+
+Here are some references to the codes we have used:
 
 https://github.com/jcalazan/youtube-audio-dl
 
-we have used:
+We have used:
 
 * Django 1.9
 * Processing
