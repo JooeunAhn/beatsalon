@@ -1,6 +1,6 @@
 # Greetings and Welcome to BEAT SALON&copy;!
 
-[beatsalon.xyz](https://beatsalon.xyx) <---- check out our awesome project!
+[beatsalon.xyz](http://beatsalon.xyz) <---- check out our awesome project!
 
 This page is based on the Django web framework.
 
