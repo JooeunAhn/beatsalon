@@ -4,3 +4,4 @@ db.sqlite3
 staticfiles
 */migrations/*
 *.mp3
+.DS*
