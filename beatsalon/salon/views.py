@@ -40,7 +40,7 @@ def serve(request,pk):
     comments = Comment.objects.order_by('pk').reverse()
     ydl_opt = {
             'format':'bestaudio/best',
-            'outtmpl': 'beatsalon/static/data/'+pk+'.%(ext)s',
+            'outtmpl': '/home/ubuntu/beatsalon/beatsalon/staticfiles/data/'+pk+'.%(ext)s',
             'postprocessors':[{
                 'key':'FFmpegExtractAudio',
                 'preferredcodec':'mp3',
