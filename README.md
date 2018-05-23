@@ -2,7 +2,14 @@
 
 [beatsalon.xyz](http://beatsalon.xyz) <---- check out our awesome project!
 
-![screenshot](screenshots/box1.png)
+### How to use 
+1. ENTER and select the "+" button at the top right corner  
+2. Search for a song and click "+" button to the right of the video   
+3. WAIT PATIENTLY for the audio file to load  
+4. Enjoy! Different visualization can be selected by clicking on the bottom left menu bar  
+
+
+![screenshot](screenshots/beatsalon_box1.gif)
 
 
 This is a music visualizer!  
@@ -20,8 +27,8 @@ If possible, use the site on full screen!
 ### Screen shots 
 
 ![screenshot](screenshots/main.png)
-![screenshot](screenshots/box2.png)
-![screenshot](screenshots/balloon.png)
+![screenshot](screenshots/beatsalon_balloon.gif)
+![screenshot](screenshots/beatsalon_spread.gif)
 
 ### We have used:  
 * Django 1.9
